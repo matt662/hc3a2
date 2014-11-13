@@ -43,6 +43,7 @@
             this.accountPadOK = new System.Windows.Forms.Button();
             this.accountPadClear = new System.Windows.Forms.Button();
             this.accountBackspace = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // accountPad1
@@ -206,11 +207,21 @@
             this.accountBackspace.UseVisualStyleBackColor = true;
             this.accountBackspace.Click += new System.EventHandler(this.accountBackspace_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(285, 405);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(117, 13);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "//Number:1234567890";
+            // 
             // AccountNumberForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(414, 427);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.accountBackspace);
             this.Controls.Add(this.accountPadClear);
             this.Controls.Add(this.accountPadOK);
@@ -250,6 +261,7 @@
         private System.Windows.Forms.Button accountPadOK;
         private System.Windows.Forms.Button accountPadClear;
         private System.Windows.Forms.Button accountBackspace;
+        private System.Windows.Forms.Label label1;
     }
 }
 

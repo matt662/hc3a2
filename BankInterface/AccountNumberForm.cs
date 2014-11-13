@@ -69,23 +69,39 @@ namespace BankInterface
 
         private void accountPadOK_Click(object sender, EventArgs e)
         {
+            if (String.Equals(accountNumberBox.Text, "1234567890", StringComparison.Ordinal))
+            {
+                //hides the current form and opens the pin form
+                this.Hide();
+
+                foreach (Form pinNumberForm in Application.OpenForms)
+                {
+                    if (pinNumberForm is PinNumberForm)
+                    {
+                        pinNumberForm.Show();
+                        return;
+                    }
+                }
+
+                PinNumberForm f2 = new PinNumberForm();
+                f2.Show();
+            }
+
+            else
+            {
+                MessageBox.Show("Invalid Account Number");
+            }
 
         }
-
         private void accountPadClear_Click(object sender, EventArgs e)
         {
             accountNumberBox.Text = "";
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void accountBackspace_Click(object sender, EventArgs e)
         {
             if(accountNumberBox.Text.Length >0)
-            accountNumberBox.Text = accountNumberBox.Text.Remove((accountNumberBox.Text.Length - 1), 1);
+            accountNumberBox.Text = accountNumberBox.Text.Remove((accountNumberBox.Text.Length - 1), 1);//remove 1 char from account text box
         }
     }
 }
