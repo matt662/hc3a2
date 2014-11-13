@@ -69,7 +69,15 @@ namespace BankInterface
 
         private void pinPadOK_Click(object sender, EventArgs e)
         {
+            if (String.Equals(pinNumberBox.Text, "1234", StringComparison.Ordinal))
+            {
+                MessageBox.Show("Valid PIN");
+            }
 
+            else
+            {
+                MessageBox.Show("Invalid PIN");
+            }
         }
 
         private void pinPadClear_Click(object sender, EventArgs e)
@@ -77,15 +85,16 @@ namespace BankInterface
             pinNumberBox.Text = "";
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void pinBackspace_Click(object sender, EventArgs e)
         {
             if(pinNumberBox.Text.Length >0)
-            pinNumberBox.Text = pinNumberBox.Text.Remove((pinNumberBox.Text.Length - 1), 1);
+            pinNumberBox.Text = pinNumberBox.Text.Remove((pinNumberBox.Text.Length - 1), 1); //removes one char from end of pin text box
+        }
+
+        private void cancelButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Application.Exit();
         }
     }
 }
