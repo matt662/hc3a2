@@ -423,7 +423,7 @@
             this.viewbalance.Name = "viewbalance";
             this.viewbalance.Size = new System.Drawing.Size(213, 56);
             this.viewbalance.TabIndex = 2;
-            this.viewbalance.Text = "View Balances";
+            this.viewbalance.Text = "View Balance";
             this.viewbalance.UseVisualStyleBackColor = true;
             this.viewbalance.Click += new System.EventHandler(this.viewbalance_Click);
             // 
@@ -1089,7 +1089,7 @@
             this.viewback.Name = "viewback";
             this.viewback.Size = new System.Drawing.Size(135, 56);
             this.viewback.TabIndex = 19;
-            this.viewback.Text = "Back";
+            this.viewback.Text = "OK";
             this.viewback.UseVisualStyleBackColor = true;
             this.viewback.Click += new System.EventHandler(this.viewback_Click);
             // 
@@ -1709,6 +1709,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(479, 493);
+            this.Controls.Add(this.usermain);
             this.Controls.Add(this.TransConfirmPanel);
             this.Controls.Add(this.viewpanel);
             this.Controls.Add(this.withdrawMoneyActionPanel);
@@ -1720,7 +1721,6 @@
             this.Controls.Add(this.withdrawpanel);
             this.Controls.Add(this.PinPanel);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.usermain);
             this.Name = "AccountNumberForm";
             this.Text = "Account Number";
             this.panel1.ResumeLayout(false);
