@@ -649,7 +649,7 @@ namespace BankInterface
             {
                 MessageBox.Show(string.Format("Invalid Entry", "Error"));
             }
-            else if ( Convert.ToInt32(tamounttext.Text) >= Convert.ToInt32(userobj.getMoney(account)) )
+            else if ( Convert.ToInt32(tamounttext.Text) > Convert.ToInt32(userobj.getMoney(account)) )
             {
                 tacctext.Text = "";
                 MessageBox.Show("Insufficient Funds");

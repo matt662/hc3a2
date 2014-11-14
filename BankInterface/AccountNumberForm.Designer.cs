@@ -1434,7 +1434,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1362, 552);
-            this.Controls.Add(this.firstpanel);
             this.Controls.Add(this.tamountpanel);
             this.Controls.Add(this.transferpanelacc);
             this.Controls.Add(this.dpanel);
@@ -1443,6 +1442,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.usermain);
             this.Controls.Add(this.viewpanel);
+            this.Controls.Add(this.firstpanel);
             this.Name = "AccountNumberForm";
             this.Text = "Account Number";
             this.panel1.ResumeLayout(false);
