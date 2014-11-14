@@ -300,6 +300,7 @@ namespace BankInterface
 
         private void withdrawOk_Click(object sender, EventArgs e)
         {
+            int balance = 0;
             if (Convert.ToInt32(withdrawbox.Text)<(userobj.getMoney(account)))
                 {
                     userobj.loseMoney(account, Convert.ToInt32(withdrawbox.Text));
@@ -312,7 +313,8 @@ namespace BankInterface
 
                 else
                 {
-                   // add text to error box
+                    balance = userobj.getMoney(account);
+                    MessageBox.Show(string.Format ("Insufficient Funds. \nAccount balance: {0}", balance),"Error");
                 }
            
             
