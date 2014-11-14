@@ -451,11 +451,9 @@ namespace BankInterface
             else
             {
                 userobj.addMoney(account, Convert.ToInt32(dbox.Text));
-                viewpanel.BringToFront();
+                depositActionPanel.BringToFront();
                 dpanel.Visible = false;
-                viewbox.Text = "My Balance";
-                dbox.Text = "";
-                viewpanel.Visible = true;
+                depositActionPanel.Visible = true;
             }
         }
 
@@ -466,6 +464,19 @@ namespace BankInterface
             dpanel.Visible = false;
             usermain.Visible = true;
             dbox.Text = "";
+        }
+
+        //#####                            #####
+        //##### DEPOSIT MONEY ACTION PANEL #####
+        //#####                            #####
+
+        private void moneyInsertedButton_Click(object sender, EventArgs e)
+        {
+            depositActionPanel.Visible = false;
+            viewpanel.BringToFront();
+            viewbox.Text = "My Balance";
+            dbox.Text = "";
+            viewpanel.Visible = true;
         }
 
         //#####                     #####
@@ -674,48 +685,18 @@ namespace BankInterface
             
             else 
             {
+                userobj.loseMoney(account, Convert.ToInt32(tamounttext.Text));
+                userobj.addMoney(toaccount, Convert.ToInt32(tamounttext.Text));
 
-                ConfirmTransPanel.BringToFront();
-                ConfirmTransPanel.Visible = true;
+                accountNumberBox.Text = "";
+                MessageBox.Show("Account not found");
+
+                tacctext.Text = "";
+                tamounttext.Text = "";
+                usermain.BringToFront();
+                usermain.Visible = true;
                 tamountpanel.Visible = false;
-                
             }
         }
-
-        private void ConfirmTransPanel_Paint(object sender, PaintEventArgs e)
-        {
-            confirmAccBox.Text = tacctext.Text;
-            confirmAmountBox.Text = tamounttext.Text;
-        }
-
-        private void confirmok_Click(object sender, EventArgs e)
-        {
-            userobj.loseMoney(account, Convert.ToInt32(tamounttext.Text));
-            userobj.addMoney(toaccount, Convert.ToInt32(tamounttext.Text));
-
-            tacctext.Text = "";
-            tamounttext.Text = "";
-            confirmAccBox.Text = "";
-            confirmAmountBox.Text = "";
-
-            usermain.BringToFront();
-            usermain.Visible = true;
-            ConfirmTransPanel.Visible = false;
-        }
-
-        private void confirmcancel_Click(object sender, EventArgs e)
-        {
-            tacctext.Text = "";
-            tamounttext.Text = "";
-            confirmAccBox.Text = "";
-            confirmAmountBox.Text = "";
-
-            usermain.BringToFront();
-            usermain.Visible = true;
-            ConfirmTransPanel.Visible = false;
-        }
-
-      
-        
     }
 }
