@@ -1574,7 +1574,7 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(20, 24);
             this.label6.TabIndex = 23;
-            this.label6.Text = "$";
+            this.label6.Text = "¥";
             // 
             // label7
             // 
@@ -1585,7 +1585,7 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(20, 24);
             this.label7.TabIndex = 23;
-            this.label7.Text = "$";
+            this.label7.Text = "¥";
             // 
             // label8
             // 
@@ -1596,7 +1596,7 @@
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(20, 24);
             this.label8.TabIndex = 23;
-            this.label8.Text = "$";
+            this.label8.Text = "¥";
             // 
             // label5
             // 
@@ -1607,7 +1607,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(20, 24);
             this.label5.TabIndex = 23;
-            this.label5.Text = "$";
+            this.label5.Text = "¥";
             // 
             // AccountNumberForm
             // 
