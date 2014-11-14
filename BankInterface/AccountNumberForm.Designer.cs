@@ -146,7 +146,11 @@
             this.moneyInsertedButton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.depositActionLabel = new System.Windows.Forms.Label();
-            this.moneyInsertedButton = new System.Windows.Forms.Button();
+            this.withdrawMoneyActionPanel = new System.Windows.Forms.Panel();
+            this.cashTakenActionButton = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.Welcome = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.usermain.SuspendLayout();
             this.PinPanel.SuspendLayout();
@@ -1502,15 +1506,6 @@
             this.depositActionLabel.TabIndex = 0;
             this.depositActionLabel.Text = "Insert deposit envelope";
             // 
-            // Welcome
-            // 
-            this.Welcome.AutoSize = true;
-            this.Welcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.Welcome.Location = new System.Drawing.Point(60, 31);
-            this.Welcome.Name = "Welcome";
-            this.Welcome.Size = new System.Drawing.Size(0, 24);
-            this.Welcome.TabIndex = 5;
-            // 
             // withdrawMoneyActionPanel
             // 
             this.withdrawMoneyActionPanel.Controls.Add(this.cashTakenActionButton);
@@ -1552,11 +1547,24 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "Remove Cash from";
             // 
+            // Welcome
+            // 
+            this.Welcome.AutoSize = true;
+            this.Welcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
+            this.Welcome.Location = new System.Drawing.Point(57, 20);
+            this.Welcome.Name = "Welcome";
+            this.Welcome.Size = new System.Drawing.Size(141, 31);
+            this.Welcome.TabIndex = 5;
+            this.Welcome.Text = "Welcome, ";
+            // 
             // AccountNumberForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1362, 552);
+            this.Controls.Add(this.usermain);
+            this.Controls.Add(this.viewpanel);
+            this.Controls.Add(this.withdrawMoneyActionPanel);
             this.Controls.Add(this.depositActionPanel);
             this.Controls.Add(this.firstpanel);
             this.Controls.Add(this.tamountpanel);
@@ -1712,6 +1720,11 @@
         private System.Windows.Forms.Button acancel;
         private System.Windows.Forms.Button pcancel;
         private System.Windows.Forms.Button moneyInsertedButton;
+        private System.Windows.Forms.Panel withdrawMoneyActionPanel;
+        private System.Windows.Forms.Button cashTakenActionButton;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label Welcome;
     }
 }
 
