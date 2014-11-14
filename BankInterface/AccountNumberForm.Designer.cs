@@ -44,6 +44,7 @@
             this.accountPadClear = new System.Windows.Forms.Button();
             this.accountBackspace = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.acancel = new System.Windows.Forms.Button();
             this.usermain = new System.Windows.Forms.Panel();
             this.SignOut = new System.Windows.Forms.Button();
             this.transferfunds = new System.Windows.Forms.Button();
@@ -51,6 +52,7 @@
             this.depositbutton = new System.Windows.Forms.Button();
             this.withdrawbutton = new System.Windows.Forms.Button();
             this.PinPanel = new System.Windows.Forms.Panel();
+            this.pcancel = new System.Windows.Forms.Button();
             this.PinClear = new System.Windows.Forms.Button();
             this.PinOk = new System.Windows.Forms.Button();
             this.pinlabel = new System.Windows.Forms.Label();
@@ -143,8 +145,7 @@
             this.depositActionPanel = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.depositActionLabel = new System.Windows.Forms.Label();
-            this.pcancel = new System.Windows.Forms.Button();
-            this.acancel = new System.Windows.Forms.Button();
+            this.moneyInsertedButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.usermain.SuspendLayout();
             this.PinPanel.SuspendLayout();
@@ -343,6 +344,16 @@
             this.panel1.TabIndex = 16;
             this.panel1.Visible = false;
             // 
+            // acancel
+            // 
+            this.acancel.Location = new System.Drawing.Point(333, 20);
+            this.acancel.Name = "acancel";
+            this.acancel.Size = new System.Drawing.Size(75, 23);
+            this.acancel.TabIndex = 22;
+            this.acancel.Text = "Cancel";
+            this.acancel.UseVisualStyleBackColor = true;
+            this.acancel.Click += new System.EventHandler(this.acancel_Click);
+            // 
             // usermain
             // 
             this.usermain.Controls.Add(this.SignOut);
@@ -429,6 +440,16 @@
             this.PinPanel.Size = new System.Drawing.Size(424, 426);
             this.PinPanel.TabIndex = 18;
             this.PinPanel.Visible = false;
+            // 
+            // pcancel
+            // 
+            this.pcancel.Location = new System.Drawing.Point(333, 20);
+            this.pcancel.Name = "pcancel";
+            this.pcancel.Size = new System.Drawing.Size(75, 23);
+            this.pcancel.TabIndex = 22;
+            this.pcancel.Text = "Cancel";
+            this.pcancel.UseVisualStyleBackColor = true;
+            this.pcancel.Click += new System.EventHandler(this.pcancel_Click);
             // 
             // PinClear
             // 
@@ -1439,12 +1460,14 @@
             // 
             // depositActionPanel
             // 
+            this.depositActionPanel.Controls.Add(this.moneyInsertedButton);
             this.depositActionPanel.Controls.Add(this.label2);
             this.depositActionPanel.Controls.Add(this.depositActionLabel);
             this.depositActionPanel.Location = new System.Drawing.Point(23, 49);
             this.depositActionPanel.Name = "depositActionPanel";
             this.depositActionPanel.Size = new System.Drawing.Size(424, 426);
             this.depositActionPanel.TabIndex = 25;
+            this.depositActionPanel.Visible = false;
             // 
             // label2
             // 
@@ -1466,34 +1489,21 @@
             this.depositActionLabel.TabIndex = 0;
             this.depositActionLabel.Text = "Insert deposit envelope";
             // 
-            // pcancel
+            // moneyInsertedButton
             // 
-            this.pcancel.Location = new System.Drawing.Point(333, 20);
-            this.pcancel.Name = "pcancel";
-            this.pcancel.Size = new System.Drawing.Size(75, 23);
-            this.pcancel.TabIndex = 22;
-            this.pcancel.Text = "Cancel";
-            this.pcancel.UseVisualStyleBackColor = true;
-            this.pcancel.Click += new System.EventHandler(this.pcancel_Click);
-            // 
-            // acancel
-            // 
-            this.acancel.Location = new System.Drawing.Point(333, 20);
-            this.acancel.Name = "acancel";
-            this.acancel.Size = new System.Drawing.Size(75, 23);
-            this.acancel.TabIndex = 22;
-            this.acancel.Text = "Cancel";
-            this.acancel.UseVisualStyleBackColor = true;
-            this.acancel.Click += new System.EventHandler(this.acancel_Click);
+            this.moneyInsertedButton.Location = new System.Drawing.Point(136, 256);
+            this.moneyInsertedButton.Name = "moneyInsertedButton";
+            this.moneyInsertedButton.Size = new System.Drawing.Size(152, 42);
+            this.moneyInsertedButton.TabIndex = 2;
+            this.moneyInsertedButton.Text = "Click to Simulate Money Inserted";
+            this.moneyInsertedButton.UseVisualStyleBackColor = true;
+            this.moneyInsertedButton.Click += new System.EventHandler(this.moneyInsertedButton_Click);
             // 
             // AccountNumberForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1362, 552);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.usermain);
-            this.Controls.Add(this.viewpanel);
             this.Controls.Add(this.depositActionPanel);
             this.Controls.Add(this.firstpanel);
             this.Controls.Add(this.tamountpanel);
@@ -1501,6 +1511,9 @@
             this.Controls.Add(this.dpanel);
             this.Controls.Add(this.withdrawpanel);
             this.Controls.Add(this.PinPanel);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.usermain);
+            this.Controls.Add(this.viewpanel);
             this.Name = "AccountNumberForm";
             this.Text = "Account Number";
             this.panel1.ResumeLayout(false);
@@ -1644,6 +1657,7 @@
         private System.Windows.Forms.Label depositActionLabel;
         private System.Windows.Forms.Button acancel;
         private System.Windows.Forms.Button pcancel;
+        private System.Windows.Forms.Button moneyInsertedButton;
     }
 }
 
