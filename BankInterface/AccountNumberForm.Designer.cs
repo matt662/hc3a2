@@ -99,9 +99,11 @@
             this.d6 = new System.Windows.Forms.Button();
             this.d5 = new System.Windows.Forms.Button();
             this.viewpanel = new System.Windows.Forms.Panel();
+            this.viewback = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.viewbox = new System.Windows.Forms.TextBox();
-            this.viewback = new System.Windows.Forms.Button();
+            this.dcancel = new System.Windows.Forms.Button();
+            this.wcancel = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.usermain.SuspendLayout();
             this.PinPanel.SuspendLayout();
@@ -542,6 +544,7 @@
             // 
             // withdrawpanel
             // 
+            this.withdrawpanel.Controls.Add(this.wcancel);
             this.withdrawpanel.Controls.Add(this.withdrawclear);
             this.withdrawpanel.Controls.Add(this.withdrawOk);
             this.withdrawpanel.Controls.Add(this.withdrawlabel);
@@ -726,6 +729,7 @@
             // 
             // dpanel
             // 
+            this.dpanel.Controls.Add(this.dcancel);
             this.dpanel.Controls.Add(this.dc);
             this.dpanel.Controls.Add(this.dok);
             this.dpanel.Controls.Add(this.dlabel);
@@ -919,6 +923,16 @@
             this.viewpanel.TabIndex = 21;
             this.viewpanel.Visible = false;
             // 
+            // viewback
+            // 
+            this.viewback.Location = new System.Drawing.Point(136, 224);
+            this.viewback.Name = "viewback";
+            this.viewback.Size = new System.Drawing.Size(132, 56);
+            this.viewback.TabIndex = 19;
+            this.viewback.Text = "Back";
+            this.viewback.UseVisualStyleBackColor = true;
+            this.viewback.Click += new System.EventHandler(this.viewback_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -938,21 +952,31 @@
             this.viewbox.Size = new System.Drawing.Size(249, 29);
             this.viewbox.TabIndex = 17;
             // 
-            // viewback
+            // dcancel
             // 
-            this.viewback.Location = new System.Drawing.Point(136, 224);
-            this.viewback.Name = "viewback";
-            this.viewback.Size = new System.Drawing.Size(132, 56);
-            this.viewback.TabIndex = 19;
-            this.viewback.Text = "Back";
-            this.viewback.UseVisualStyleBackColor = true;
-            this.viewback.Click += new System.EventHandler(this.viewback_Click);
+            this.dcancel.Location = new System.Drawing.Point(333, 20);
+            this.dcancel.Name = "dcancel";
+            this.dcancel.Size = new System.Drawing.Size(75, 23);
+            this.dcancel.TabIndex = 21;
+            this.dcancel.Text = "Cancel";
+            this.dcancel.UseVisualStyleBackColor = true;
+            this.dcancel.Click += new System.EventHandler(this.dcancel_Click);
+            // 
+            // wcancel
+            // 
+            this.wcancel.Location = new System.Drawing.Point(333, 20);
+            this.wcancel.Name = "wcancel";
+            this.wcancel.Size = new System.Drawing.Size(75, 23);
+            this.wcancel.TabIndex = 21;
+            this.wcancel.Text = "Cancel";
+            this.wcancel.UseVisualStyleBackColor = true;
+            this.wcancel.Click += new System.EventHandler(this.wcancel_Click);
             // 
             // AccountNumberForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1368, 552);
+            this.ClientSize = new System.Drawing.Size(1362, 552);
             this.Controls.Add(this.viewpanel);
             this.Controls.Add(this.dpanel);
             this.Controls.Add(this.withdrawpanel);
@@ -1052,6 +1076,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox viewbox;
         private System.Windows.Forms.Button viewback;
+        private System.Windows.Forms.Button dcancel;
+        private System.Windows.Forms.Button wcancel;
     }
 }
 

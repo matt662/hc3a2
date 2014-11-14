@@ -78,6 +78,7 @@ namespace BankInterface
             panel1.Visible = false;        
             PinPanel.BringToFront();
             PinPanel.Visible = true;
+            accountNumberBox.Text = "";
         }
 
         private void accountPadClear_Click(object sender, EventArgs e)
@@ -99,6 +100,7 @@ namespace BankInterface
         {
             PinPanel.Visible = false;        
             usermain.BringToFront();
+            PinBox.Text = "";
             usermain.Visible = true;
         }
 
@@ -169,7 +171,9 @@ namespace BankInterface
 
         private void SignOut_Click(object sender, EventArgs e)
         {
-
+            panel1.BringToFront();
+            usermain.Visible = false;
+            panel1.Visible = true;
         }
 
         private void withdrawbutton_Click(object sender, EventArgs e)
@@ -257,9 +261,11 @@ namespace BankInterface
 
         private void withdrawOk_Click(object sender, EventArgs e)
         {
-            usermain.BringToFront();
+            viewpanel.BringToFront();
             withdrawpanel.Visible = false;
-            usermain.Visible = true;
+            viewbox.Text = "My Balance";
+            withdrawbox.Text = "";
+            viewpanel.Visible = true;
             
         }
 
@@ -273,6 +279,14 @@ namespace BankInterface
         {
             if (withdrawbox.Text.Length > 0)
                withdrawbox.Text = withdrawbox.Text.Remove((withdrawbox.Text.Length - 1), 1);
+        }
+
+        private void wcancel_Click(object sender, EventArgs e)
+        {
+            withdrawbox.Text = "";
+            usermain.BringToFront();
+            usermain.Visible = true;
+            withdrawpanel.Visible = false;
         }
 
         //#####                     #####
@@ -343,9 +357,20 @@ namespace BankInterface
 
         private void dok_Click(object sender, EventArgs e)
         {
+            viewpanel.BringToFront();
+            dpanel.Visible = false;
+            viewbox.Text = "My Balance";
+            dbox.Text = "";
+            viewpanel.Visible = true;
+        }
+
+     
+        private void dcancel_Click(object sender, EventArgs e)
+        {
             usermain.BringToFront();
             dpanel.Visible = false;
             usermain.Visible = true;
+            dbox.Text = "";
         }
 
         //#####                     #####
@@ -358,5 +383,9 @@ namespace BankInterface
             viewpanel.Visible = false;
             usermain.Visible = true;
         }
+
+     
+
+        
     }
 }
