@@ -152,7 +152,6 @@ namespace BankInterface
                     PinPanel.Visible = false;
                     usermain.BringToFront();
                     PinBox.Text = "";
-                    welcome.Text = "Welcome, " + Convert.ToString(userobj.getAccountNum(account));
                     usermain.Visible = true;
                   
                 }
@@ -452,11 +451,9 @@ namespace BankInterface
             else
             {
                 userobj.addMoney(account, Convert.ToInt32(dbox.Text));
-                viewpanel.BringToFront();
+                depositActionPanel.BringToFront();
                 dpanel.Visible = false;
-                viewbox.Text = "My Balance";
-                dbox.Text = "";
-                viewpanel.Visible = true;
+                depositActionPanel.Visible = true;
             }
         }
 
@@ -467,6 +464,19 @@ namespace BankInterface
             dpanel.Visible = false;
             usermain.Visible = true;
             dbox.Text = "";
+        }
+
+        //#####                            #####
+        //##### DEPOSIT MONEY ACTION PANEL #####
+        //#####                            #####
+
+        private void moneyInsertedButton_Click(object sender, EventArgs e)
+        {
+            depositActionPanel.Visible = false;
+            viewpanel.BringToFront();
+            viewbox.Text = "My Balance";
+            dbox.Text = "";
+            viewpanel.Visible = true;
         }
 
         //#####                     #####
@@ -688,15 +698,5 @@ namespace BankInterface
                 tamountpanel.Visible = false;
             }
         }
-
-
-     
-
-      
-
-       
-
-      
-        
     }
 }
