@@ -44,6 +44,7 @@
             this.accountPadClear = new System.Windows.Forms.Button();
             this.accountBackspace = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.acancel = new System.Windows.Forms.Button();
             this.usermain = new System.Windows.Forms.Panel();
             this.SignOut = new System.Windows.Forms.Button();
             this.transferfunds = new System.Windows.Forms.Button();
@@ -51,6 +52,7 @@
             this.depositbutton = new System.Windows.Forms.Button();
             this.withdrawbutton = new System.Windows.Forms.Button();
             this.PinPanel = new System.Windows.Forms.Panel();
+            this.pcancel = new System.Windows.Forms.Button();
             this.PinClear = new System.Windows.Forms.Button();
             this.PinOk = new System.Windows.Forms.Button();
             this.pinlabel = new System.Windows.Forms.Label();
@@ -143,8 +145,13 @@
             this.depositActionPanel = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.depositActionLabel = new System.Windows.Forms.Label();
-            this.pcancel = new System.Windows.Forms.Button();
-            this.acancel = new System.Windows.Forms.Button();
+            this.ConfirmTransPanel = new System.Windows.Forms.Panel();
+            this.confirmAccBox = new System.Windows.Forms.Label();
+            this.confirmAmountBox = new System.Windows.Forms.Label();
+            this.confirmok = new System.Windows.Forms.Button();
+            this.confirmAmountLabel = new System.Windows.Forms.Label();
+            this.confirmcancel = new System.Windows.Forms.Button();
+            this.confirmAccLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.usermain.SuspendLayout();
             this.PinPanel.SuspendLayout();
@@ -155,6 +162,7 @@
             this.tamountpanel.SuspendLayout();
             this.firstpanel.SuspendLayout();
             this.depositActionPanel.SuspendLayout();
+            this.ConfirmTransPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // accountPad1
@@ -343,6 +351,16 @@
             this.panel1.TabIndex = 16;
             this.panel1.Visible = false;
             // 
+            // acancel
+            // 
+            this.acancel.Location = new System.Drawing.Point(333, 20);
+            this.acancel.Name = "acancel";
+            this.acancel.Size = new System.Drawing.Size(75, 23);
+            this.acancel.TabIndex = 22;
+            this.acancel.Text = "Cancel";
+            this.acancel.UseVisualStyleBackColor = true;
+            this.acancel.Click += new System.EventHandler(this.acancel_Click);
+            // 
             // usermain
             // 
             this.usermain.Controls.Add(this.SignOut);
@@ -429,6 +447,16 @@
             this.PinPanel.Size = new System.Drawing.Size(424, 426);
             this.PinPanel.TabIndex = 18;
             this.PinPanel.Visible = false;
+            // 
+            // pcancel
+            // 
+            this.pcancel.Location = new System.Drawing.Point(333, 20);
+            this.pcancel.Name = "pcancel";
+            this.pcancel.Size = new System.Drawing.Size(75, 23);
+            this.pcancel.TabIndex = 22;
+            this.pcancel.Text = "Cancel";
+            this.pcancel.UseVisualStyleBackColor = true;
+            this.pcancel.Click += new System.EventHandler(this.pcancel_Click);
             // 
             // PinClear
             // 
@@ -1466,31 +1494,87 @@
             this.depositActionLabel.TabIndex = 0;
             this.depositActionLabel.Text = "Insert deposit envelope";
             // 
-            // pcancel
+            // ConfirmTransPanel
             // 
-            this.pcancel.Location = new System.Drawing.Point(333, 20);
-            this.pcancel.Name = "pcancel";
-            this.pcancel.Size = new System.Drawing.Size(75, 23);
-            this.pcancel.TabIndex = 22;
-            this.pcancel.Text = "Cancel";
-            this.pcancel.UseVisualStyleBackColor = true;
-            this.pcancel.Click += new System.EventHandler(this.pcancel_Click);
+            this.ConfirmTransPanel.Controls.Add(this.confirmAccBox);
+            this.ConfirmTransPanel.Controls.Add(this.confirmAmountBox);
+            this.ConfirmTransPanel.Controls.Add(this.confirmok);
+            this.ConfirmTransPanel.Controls.Add(this.confirmAmountLabel);
+            this.ConfirmTransPanel.Controls.Add(this.confirmcancel);
+            this.ConfirmTransPanel.Controls.Add(this.confirmAccLabel);
+            this.ConfirmTransPanel.Location = new System.Drawing.Point(484, 49);
+            this.ConfirmTransPanel.Name = "ConfirmTransPanel";
+            this.ConfirmTransPanel.Size = new System.Drawing.Size(417, 426);
+            this.ConfirmTransPanel.TabIndex = 26;
+            this.ConfirmTransPanel.Visible = false;
+            this.ConfirmTransPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.ConfirmTransPanel_Paint);
             // 
-            // acancel
+            // confirmAccBox
             // 
-            this.acancel.Location = new System.Drawing.Point(333, 20);
-            this.acancel.Name = "acancel";
-            this.acancel.Size = new System.Drawing.Size(75, 23);
-            this.acancel.TabIndex = 22;
-            this.acancel.Text = "Cancel";
-            this.acancel.UseVisualStyleBackColor = true;
-            this.acancel.Click += new System.EventHandler(this.acancel_Click);
+            this.confirmAccBox.AutoSize = true;
+            this.confirmAccBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.confirmAccBox.Location = new System.Drawing.Point(172, 196);
+            this.confirmAccBox.Name = "confirmAccBox";
+            this.confirmAccBox.Size = new System.Drawing.Size(65, 24);
+            this.confirmAccBox.TabIndex = 24;
+            this.confirmAccBox.Text = "default";
+            // 
+            // confirmAmountBox
+            // 
+            this.confirmAmountBox.AutoSize = true;
+            this.confirmAmountBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.confirmAmountBox.Location = new System.Drawing.Point(177, 84);
+            this.confirmAmountBox.Name = "confirmAmountBox";
+            this.confirmAmountBox.Size = new System.Drawing.Size(65, 24);
+            this.confirmAmountBox.TabIndex = 23;
+            this.confirmAmountBox.Text = "default";
+            // 
+            // confirmok
+            // 
+            this.confirmok.Location = new System.Drawing.Point(34, 271);
+            this.confirmok.Name = "confirmok";
+            this.confirmok.Size = new System.Drawing.Size(132, 56);
+            this.confirmok.TabIndex = 22;
+            this.confirmok.Text = "Confirm";
+            this.confirmok.UseVisualStyleBackColor = true;
+            this.confirmok.Click += new System.EventHandler(this.confirmok_Click);
+            // 
+            // confirmAmountLabel
+            // 
+            this.confirmAmountLabel.AutoSize = true;
+            this.confirmAmountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.confirmAmountLabel.Location = new System.Drawing.Point(177, 47);
+            this.confirmAmountLabel.Name = "confirmAmountLabel";
+            this.confirmAmountLabel.Size = new System.Drawing.Size(60, 24);
+            this.confirmAmountLabel.TabIndex = 20;
+            this.confirmAmountLabel.Text = "Send:";
+            // 
+            // confirmcancel
+            // 
+            this.confirmcancel.Location = new System.Drawing.Point(243, 271);
+            this.confirmcancel.Name = "confirmcancel";
+            this.confirmcancel.Size = new System.Drawing.Size(132, 56);
+            this.confirmcancel.TabIndex = 19;
+            this.confirmcancel.Text = "Cancel";
+            this.confirmcancel.UseVisualStyleBackColor = true;
+            this.confirmcancel.Click += new System.EventHandler(this.confirmcancel_Click);
+            // 
+            // confirmAccLabel
+            // 
+            this.confirmAccLabel.AutoSize = true;
+            this.confirmAccLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.confirmAccLabel.Location = new System.Drawing.Point(113, 158);
+            this.confirmAccLabel.Name = "confirmAccLabel";
+            this.confirmAccLabel.Size = new System.Drawing.Size(181, 24);
+            this.confirmAccLabel.TabIndex = 18;
+            this.confirmAccLabel.Text = "To account number:";
             // 
             // AccountNumberForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1362, 552);
+            this.Controls.Add(this.ConfirmTransPanel);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.usermain);
             this.Controls.Add(this.viewpanel);
@@ -1521,6 +1605,8 @@
             this.firstpanel.ResumeLayout(false);
             this.depositActionPanel.ResumeLayout(false);
             this.depositActionPanel.PerformLayout();
+            this.ConfirmTransPanel.ResumeLayout(false);
+            this.ConfirmTransPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1644,6 +1730,13 @@
         private System.Windows.Forms.Label depositActionLabel;
         private System.Windows.Forms.Button acancel;
         private System.Windows.Forms.Button pcancel;
+        private System.Windows.Forms.Panel ConfirmTransPanel;
+        private System.Windows.Forms.Label confirmAmountLabel;
+        private System.Windows.Forms.Button confirmcancel;
+        private System.Windows.Forms.Label confirmAccLabel;
+        private System.Windows.Forms.Button confirmok;
+        private System.Windows.Forms.Label confirmAccBox;
+        private System.Windows.Forms.Label confirmAmountBox;
     }
 }
 

@@ -674,23 +674,46 @@ namespace BankInterface
             
             else 
             {
-                userobj.loseMoney(account, Convert.ToInt32(tamounttext.Text));
-                userobj.addMoney(toaccount, Convert.ToInt32(tamounttext.Text));
 
-                accountNumberBox.Text = "";
-                MessageBox.Show("Account not found", );
-
-                tacctext.Text = "";
-                tamounttext.Text = "";
-                usermain.BringToFront();
-                usermain.Visible = true;
+                ConfirmTransPanel.BringToFront();
+                ConfirmTransPanel.Visible = true;
                 tamountpanel.Visible = false;
+                
             }
         }
 
-      
+        private void ConfirmTransPanel_Paint(object sender, PaintEventArgs e)
+        {
+            confirmAccBox.Text = tacctext.Text;
+            confirmAmountBox.Text = tamounttext.Text;
+        }
 
-       
+        private void confirmok_Click(object sender, EventArgs e)
+        {
+            userobj.loseMoney(account, Convert.ToInt32(tamounttext.Text));
+            userobj.addMoney(toaccount, Convert.ToInt32(tamounttext.Text));
+
+            tacctext.Text = "";
+            tamounttext.Text = "";
+            confirmAccBox.Text = "";
+            confirmAmountBox.Text = "";
+
+            usermain.BringToFront();
+            usermain.Visible = true;
+            ConfirmTransPanel.Visible = false;
+        }
+
+        private void confirmcancel_Click(object sender, EventArgs e)
+        {
+            tacctext.Text = "";
+            tamounttext.Text = "";
+            confirmAccBox.Text = "";
+            confirmAmountBox.Text = "";
+
+            usermain.BringToFront();
+            usermain.Visible = true;
+            ConfirmTransPanel.Visible = false;
+        }
 
       
         
