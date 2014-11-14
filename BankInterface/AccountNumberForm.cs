@@ -129,6 +129,15 @@ namespace BankInterface
             accountNumberBox.Text = accountNumberBox.Text.Remove((accountNumberBox.Text.Length - 1), 1);
         }
 
+        private void acancel_Click(object sender, EventArgs e)
+        {
+            firstpanel.BringToFront();
+            panel1.Visible = false;
+            firstpanel.Visible = true;
+            accountNumberBox.Text = "";
+
+        }
+
         //#####                       #####
         //##### START ENTER PIN PANEL #####
         //#####                       #####
@@ -216,6 +225,14 @@ namespace BankInterface
         {
             if (PinBox.Text.Length > 0)
                 PinBox.Text = "";
+        }
+
+        private void pcancel_Click(object sender, EventArgs e)
+        {
+            firstpanel.BringToFront();
+            PinBox.Text = "";
+            PinPanel.Visible = false;
+            firstpanel.Visible = true;
         }
 
         //#####                       #####
@@ -667,6 +684,10 @@ namespace BankInterface
                 tamountpanel.Visible = false;
             }
         }
+
+       
+
+      
         
     }
 }
