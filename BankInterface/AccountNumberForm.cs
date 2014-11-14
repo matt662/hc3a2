@@ -97,6 +97,7 @@ namespace BankInterface
             if(!found)
             {
                 accountNumberBox.Text = "";
+                MessageBox.Show("Account not found");
             }
 
             
@@ -135,6 +136,7 @@ namespace BankInterface
                 else
                 {
                    PinBox.Text = "";
+                   MessageBox.Show("Incorrect Pin");
                 }
 
             
