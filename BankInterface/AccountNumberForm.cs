@@ -152,6 +152,7 @@ namespace BankInterface
                     PinPanel.Visible = false;
                     usermain.BringToFront();
                     PinBox.Text = "";
+                    Welcome.Text = "Welcome, " + Convert.ToString(userobj.getAccountNum(account));
                     usermain.Visible = true;
                   
                 }
