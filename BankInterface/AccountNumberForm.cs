@@ -677,6 +677,9 @@ namespace BankInterface
                 userobj.loseMoney(account, Convert.ToInt32(tamounttext.Text));
                 userobj.addMoney(toaccount, Convert.ToInt32(tamounttext.Text));
 
+                accountNumberBox.Text = "";
+                MessageBox.Show("Account not found", );
+
                 tacctext.Text = "";
                 tamounttext.Text = "";
                 usermain.BringToFront();
