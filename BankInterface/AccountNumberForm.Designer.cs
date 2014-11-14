@@ -1043,9 +1043,9 @@
             // 
             // viewback
             // 
-            this.viewback.Location = new System.Drawing.Point(136, 224);
+            this.viewback.Location = new System.Drawing.Point(122, 209);
             this.viewback.Name = "viewback";
-            this.viewback.Size = new System.Drawing.Size(132, 56);
+            this.viewback.Size = new System.Drawing.Size(135, 56);
             this.viewback.TabIndex = 19;
             this.viewback.Text = "Back";
             this.viewback.UseVisualStyleBackColor = true;
@@ -1065,7 +1065,7 @@
             // 
             this.viewbox.Enabled = false;
             this.viewbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.viewbox.Location = new System.Drawing.Point(82, 144);
+            this.viewbox.Location = new System.Drawing.Point(82, 154);
             this.viewbox.Name = "viewbox";
             this.viewbox.Size = new System.Drawing.Size(236, 29);
             this.viewbox.TabIndex = 17;
@@ -1603,7 +1603,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label5.Location = new System.Drawing.Point(59, 146);
+            this.label5.Location = new System.Drawing.Point(59, 156);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(20, 24);
             this.label5.TabIndex = 23;
