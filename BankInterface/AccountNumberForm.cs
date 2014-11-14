@@ -13,6 +13,7 @@ namespace BankInterface
     public partial class AccountNumberForm : Form
     {
         public int account;
+        public int toaccount;
         Users userobj = new Users();
         
         public AccountNumberForm()
@@ -506,13 +507,31 @@ namespace BankInterface
 
         private void taccok_Click(object sender, EventArgs e)
         {
-            tamountpanel.BringToFront();
-            tamountpanel.Visible = true;
-            transferpanelacc.Visible = false;
+            Boolean found = false;
+            for (int i = 0; i <Users.accounts.Length ; i++) // fixed; don't use .GetLength, use .Length
+            {
+               
+                if(tacctext.Text.Equals(userobj.getAccountNum(i).ToString()))
+                {
+                    toaccount = i;
+                    tamountpanel.BringToFront();
+                    tamountpanel.Visible = true;
+                    transferpanelacc.Visible = false;
+                    found = true;
+                    break;
+                }
+            }
+
+            if(!found)
+            {
+                accountNumberBox.Text = "";
+                MessageBox.Show("Account not found");
+            }
         }
 
         private void tcancelacc_Click(object sender, EventArgs e)
         {
+            toaccount = -1;
             tacctext.Text = "";
             usermain.BringToFront();
             usermain.Visible = true;
@@ -596,13 +615,24 @@ namespace BankInterface
 
         private void tamountok_Click(object sender, EventArgs e)
         {
-            tacctext.Text = "";
-            tamounttext.Text = "";
-            usermain.BringToFront();
-            usermain.Visible = true;
-            tamountpanel.Visible = false;
+            
+            if ( Convert.ToInt32(tamounttext.Text) > Convert.ToInt32(userobj.getMoney(account)) )
+            {
+                tacctext.Text = "";
+                MessageBox.Show("Insufficient Funds");
+            }
+            
+            else 
+            {
+                userobj.loseMoney(account, Convert.ToInt32(tamounttext.Text));
+                userobj.addMoney(toaccount, Convert.ToInt32(tamounttext.Text));
 
-            //add logic
+                tacctext.Text = "";
+                tamounttext.Text = "";
+                usermain.BringToFront();
+                usermain.Visible = true;
+                tamountpanel.Visible = false;
+            }
         }
 
         
