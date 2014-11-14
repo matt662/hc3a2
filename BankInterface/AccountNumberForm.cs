@@ -339,11 +339,9 @@ namespace BankInterface
             else if (Convert.ToInt32(withdrawbox.Text)<=(userobj.getMoney(account)))
                 {
                     userobj.loseMoney(account, Convert.ToInt32(withdrawbox.Text));
-                    viewpanel.BringToFront();
                     withdrawpanel.Visible = false;
-                    viewbox.Text = "My Balance";
-                    withdrawbox.Text = "";
-                    viewpanel.Visible = true;
+                    withdrawMoneyActionPanel.BringToFront();
+                    withdrawMoneyActionPanel.Visible = true;
                 }
 
                 else
@@ -373,6 +371,19 @@ namespace BankInterface
             usermain.BringToFront();
             usermain.Visible = true;
             withdrawpanel.Visible = false;
+        }
+
+        //#####                            #####
+        //##### WITHDRAW MONEY ACTION PANEL #####
+        //#####                            #####
+
+        private void cashTakenActionButton_Click(object sender, EventArgs e)
+        {
+            viewpanel.BringToFront();
+            withdrawMoneyActionPanel.Visible = false;
+            viewbox.Text = "My Balance";
+            withdrawbox.Text = "";
+            viewpanel.Visible = true;
         }
 
         //#####                     #####
