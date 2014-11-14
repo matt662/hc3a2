@@ -21,6 +21,20 @@ namespace BankInterface
             InitializeComponent();
         }
 
+        //#####                   #####
+        //##### START FIRST PANEL #####
+        //#####                   #####
+        private void firstpanel_Paint(object sender, PaintEventArgs e)
+        {
+            firstpanel.BringToFront();
+        }
+
+        private void beginbutton_Click(object sender, EventArgs e)
+        {
+            firstpanel.Visible = false;
+            panel1.BringToFront();
+            panel1.Visible = true;
+        }
 
         //#####                           #####
         //##### START ENTER ACCOUNT PANEL #####
@@ -211,9 +225,9 @@ namespace BankInterface
         private void SignOut_Click(object sender, EventArgs e)
         {
             account = -1;
-            panel1.BringToFront();
+            firstpanel.BringToFront();
             usermain.Visible = false;
-            panel1.Visible = true;
+            firstpanel.Visible = true;
         }
 
         private void withdrawbutton_Click(object sender, EventArgs e)
@@ -636,7 +650,6 @@ namespace BankInterface
                 tamountpanel.Visible = false;
             }
         }
-
         
     }
 }

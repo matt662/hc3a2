@@ -138,6 +138,8 @@
             this.tamount9 = new System.Windows.Forms.Button();
             this.tamount6 = new System.Windows.Forms.Button();
             this.tamount5 = new System.Windows.Forms.Button();
+            this.firstpanel = new System.Windows.Forms.Panel();
+            this.beginbutton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.usermain.SuspendLayout();
             this.PinPanel.SuspendLayout();
@@ -146,6 +148,7 @@
             this.viewpanel.SuspendLayout();
             this.transferpanelacc.SuspendLayout();
             this.tamountpanel.SuspendLayout();
+            this.firstpanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // accountPad1
@@ -330,6 +333,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(414, 426);
             this.panel1.TabIndex = 16;
+            this.panel1.Visible = false;
             // 
             // usermain
             // 
@@ -1027,7 +1031,7 @@
             this.transferpanelacc.Controls.Add(this.tacc9);
             this.transferpanelacc.Controls.Add(this.tacc6);
             this.transferpanelacc.Controls.Add(this.tacc5);
-            this.transferpanelacc.Location = new System.Drawing.Point(911, 49);
+            this.transferpanelacc.Location = new System.Drawing.Point(23, 49);
             this.transferpanelacc.Name = "transferpanelacc";
             this.transferpanelacc.Size = new System.Drawing.Size(424, 426);
             this.transferpanelacc.TabIndex = 22;
@@ -1222,7 +1226,7 @@
             this.tamountpanel.Controls.Add(this.tamount9);
             this.tamountpanel.Controls.Add(this.tamount6);
             this.tamountpanel.Controls.Add(this.tamount5);
-            this.tamountpanel.Location = new System.Drawing.Point(464, 49);
+            this.tamountpanel.Location = new System.Drawing.Point(23, 49);
             this.tamountpanel.Name = "tamountpanel";
             this.tamountpanel.Size = new System.Drawing.Size(424, 426);
             this.tamountpanel.TabIndex = 23;
@@ -1399,11 +1403,32 @@
             this.tamount5.UseVisualStyleBackColor = true;
             this.tamount5.Click += new System.EventHandler(this.tamount5_Click);
             // 
+            // firstpanel
+            // 
+            this.firstpanel.Controls.Add(this.beginbutton);
+            this.firstpanel.Location = new System.Drawing.Point(23, 49);
+            this.firstpanel.Name = "firstpanel";
+            this.firstpanel.Size = new System.Drawing.Size(424, 426);
+            this.firstpanel.TabIndex = 24;
+            this.firstpanel.Paint += new System.Windows.Forms.PaintEventHandler(this.firstpanel_Paint);
+            // 
+            // beginbutton
+            // 
+            this.beginbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
+            this.beginbutton.Location = new System.Drawing.Point(59, 94);
+            this.beginbutton.Name = "beginbutton";
+            this.beginbutton.Size = new System.Drawing.Size(302, 233);
+            this.beginbutton.TabIndex = 19;
+            this.beginbutton.Text = "Tap here to begin.";
+            this.beginbutton.UseVisualStyleBackColor = true;
+            this.beginbutton.Click += new System.EventHandler(this.beginbutton_Click);
+            // 
             // AccountNumberForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1362, 552);
+            this.Controls.Add(this.firstpanel);
             this.Controls.Add(this.tamountpanel);
             this.Controls.Add(this.transferpanelacc);
             this.Controls.Add(this.viewpanel);
@@ -1429,6 +1454,7 @@
             this.transferpanelacc.PerformLayout();
             this.tamountpanel.ResumeLayout(false);
             this.tamountpanel.PerformLayout();
+            this.firstpanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1545,6 +1571,8 @@
         private System.Windows.Forms.Button tamount9;
         private System.Windows.Forms.Button tamount6;
         private System.Windows.Forms.Button tamount5;
+        private System.Windows.Forms.Panel firstpanel;
+        private System.Windows.Forms.Button beginbutton;
     }
 }
 
