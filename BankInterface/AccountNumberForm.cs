@@ -300,8 +300,12 @@ namespace BankInterface
 
         private void withdrawOk_Click(object sender, EventArgs e)
         {
-            int balance = 0;
-            if (Convert.ToInt32(withdrawbox.Text)<(userobj.getMoney(account)))
+            float balance = 0;
+            if (withdrawbox.Text == "")
+            {
+                MessageBox.Show(string.Format("Invalid Entry", "Error"));
+            }
+            else if (Convert.ToInt32(withdrawbox.Text)<=(userobj.getMoney(account)))
                 {
                     userobj.loseMoney(account, Convert.ToInt32(withdrawbox.Text));
                     viewpanel.BringToFront();
@@ -408,12 +412,20 @@ namespace BankInterface
 
         private void dok_Click(object sender, EventArgs e)
         {
-            userobj.addMoney(account, Convert.ToInt32(withdrawbox.Text));
-            viewpanel.BringToFront();
-            dpanel.Visible = false;
-            viewbox.Text = "My Balance";
-            dbox.Text = "";
-            viewpanel.Visible = true;
+
+            if (dbox.Text == "")
+            {
+                MessageBox.Show(string.Format("Invalid Entry", "Error"));
+            }
+            else
+            {
+                userobj.addMoney(account, Convert.ToInt32(dbox.Text));
+                viewpanel.BringToFront();
+                dpanel.Visible = false;
+                viewbox.Text = "My Balance";
+                dbox.Text = "";
+                viewpanel.Visible = true;
+            }
         }
 
      
@@ -617,8 +629,13 @@ namespace BankInterface
 
         private void tamountok_Click(object sender, EventArgs e)
         {
-            
-            if ( Convert.ToInt32(tamounttext.Text) > Convert.ToInt32(userobj.getMoney(account)) )
+
+
+            if (tamounttext.Text == "")
+            {
+                MessageBox.Show(string.Format("Invalid Entry", "Error"));
+            }
+            else if ( Convert.ToInt32(tamounttext.Text) >= Convert.ToInt32(userobj.getMoney(account)) )
             {
                 tacctext.Text = "";
                 MessageBox.Show("Insufficient Funds");

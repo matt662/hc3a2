@@ -11,7 +11,7 @@ public class Users
 
        public static int[] accounts = { 12345, 11111, 22222, 33333, 44444, 55555, 66666, 77777, 88888, 99999, 00000 };
        public static int[] pins = { 12345, 11111, 22222, 33333, 44444, 55555, 66666, 77777, 88888, 99999, 00000 };
-       public int[] money = { 12345, 11111, 22222, 33333, 44444, 55555, 66666, 77777, 88888, 99999, 00000 };
+       public float[] money = { 12345, 11111, 22222, 33333, 44444, 55555, 66666, 77777, 88888, 99999, 00000 };
 
 
        /*public int getNumUsers() //should be fixed, but no longer needed
@@ -24,23 +24,23 @@ public class Users
            return accounts[index];
        }
 
-       public int getPinNum(int index)
+       public float getPinNum(int index)
        {
            return pins[index];
        }
 
 
-      public int getMoney(int i)
+      public float getMoney(int i)
        {
            return money[i];
        }
 
-      public void addMoney(int i,int moneyz)
+      public void addMoney(int i,float moneyz)
        {
            money[i]+=moneyz;
        }
 
-     public  void loseMoney(int i, int moneyz)
+     public  void loseMoney(int i, float moneyz)
        {
            money[i] -= moneyz;
        }

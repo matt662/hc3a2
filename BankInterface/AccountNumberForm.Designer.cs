@@ -250,7 +250,7 @@
             // accountPad0
             // 
             this.accountPad0.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.accountPad0.Location = new System.Drawing.Point(20, 341);
+            this.accountPad0.Location = new System.Drawing.Point(105, 337);
             this.accountPad0.Name = "accountPad0";
             this.accountPad0.Size = new System.Drawing.Size(79, 74);
             this.accountPad0.TabIndex = 9;
@@ -280,9 +280,9 @@
             // accountPadOK
             // 
             this.accountPadOK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.accountPadOK.Location = new System.Drawing.Point(275, 97);
+            this.accountPadOK.Location = new System.Drawing.Point(309, 116);
             this.accountPadOK.Name = "accountPadOK";
-            this.accountPadOK.Size = new System.Drawing.Size(120, 41);
+            this.accountPadOK.Size = new System.Drawing.Size(86, 41);
             this.accountPadOK.TabIndex = 13;
             this.accountPadOK.Text = "OK";
             this.accountPadOK.UseVisualStyleBackColor = false;
@@ -291,9 +291,9 @@
             // accountPadClear
             // 
             this.accountPadClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.accountPadClear.Location = new System.Drawing.Point(275, 144);
+            this.accountPadClear.Location = new System.Drawing.Point(309, 276);
             this.accountPadClear.Name = "accountPadClear";
-            this.accountPadClear.Size = new System.Drawing.Size(120, 41);
+            this.accountPadClear.Size = new System.Drawing.Size(86, 41);
             this.accountPadClear.TabIndex = 14;
             this.accountPadClear.Text = "CLEAR";
             this.accountPadClear.UseVisualStyleBackColor = false;
@@ -301,12 +301,13 @@
             // 
             // accountBackspace
             // 
-            this.accountBackspace.Location = new System.Drawing.Point(105, 386);
+            this.accountBackspace.BackColor = System.Drawing.Color.Gold;
+            this.accountBackspace.Location = new System.Drawing.Point(309, 196);
             this.accountBackspace.Name = "accountBackspace";
-            this.accountBackspace.Size = new System.Drawing.Size(164, 29);
+            this.accountBackspace.Size = new System.Drawing.Size(86, 41);
             this.accountBackspace.TabIndex = 15;
             this.accountBackspace.Text = "Backspace";
-            this.accountBackspace.UseVisualStyleBackColor = true;
+            this.accountBackspace.UseVisualStyleBackColor = false;
             this.accountBackspace.Click += new System.EventHandler(this.accountBackspace_Click);
             // 
             // panel1
@@ -420,9 +421,9 @@
             // PinClear
             // 
             this.PinClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.PinClear.Location = new System.Drawing.Point(275, 144);
+            this.PinClear.Location = new System.Drawing.Point(309, 276);
             this.PinClear.Name = "PinClear";
-            this.PinClear.Size = new System.Drawing.Size(120, 41);
+            this.PinClear.Size = new System.Drawing.Size(86, 41);
             this.PinClear.TabIndex = 20;
             this.PinClear.Text = "CLEAR";
             this.PinClear.UseVisualStyleBackColor = false;
@@ -431,9 +432,9 @@
             // PinOk
             // 
             this.PinOk.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.PinOk.Location = new System.Drawing.Point(275, 97);
+            this.PinOk.Location = new System.Drawing.Point(309, 116);
             this.PinOk.Name = "PinOk";
-            this.PinOk.Size = new System.Drawing.Size(120, 41);
+            this.PinOk.Size = new System.Drawing.Size(86, 41);
             this.PinOk.TabIndex = 19;
             this.PinOk.Text = "OK";
             this.PinOk.UseVisualStyleBackColor = false;
@@ -460,18 +461,19 @@
             // 
             // PinBack
             // 
-            this.PinBack.Location = new System.Drawing.Point(105, 382);
+            this.PinBack.BackColor = System.Drawing.Color.Gold;
+            this.PinBack.Location = new System.Drawing.Point(309, 196);
             this.PinBack.Name = "PinBack";
-            this.PinBack.Size = new System.Drawing.Size(164, 29);
+            this.PinBack.Size = new System.Drawing.Size(86, 41);
             this.PinBack.TabIndex = 16;
             this.PinBack.Text = "Backspace";
-            this.PinBack.UseVisualStyleBackColor = true;
+            this.PinBack.UseVisualStyleBackColor = false;
             this.PinBack.Click += new System.EventHandler(this.PinBack_Click);
             // 
             // Pin0
             // 
             this.Pin0.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.Pin0.Location = new System.Drawing.Point(20, 337);
+            this.Pin0.Location = new System.Drawing.Point(105, 337);
             this.Pin0.Name = "Pin0";
             this.Pin0.Size = new System.Drawing.Size(79, 74);
             this.Pin0.TabIndex = 12;
@@ -615,9 +617,9 @@
             // withdrawclear
             // 
             this.withdrawclear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.withdrawclear.Location = new System.Drawing.Point(275, 144);
+            this.withdrawclear.Location = new System.Drawing.Point(309, 276);
             this.withdrawclear.Name = "withdrawclear";
-            this.withdrawclear.Size = new System.Drawing.Size(120, 41);
+            this.withdrawclear.Size = new System.Drawing.Size(86, 41);
             this.withdrawclear.TabIndex = 20;
             this.withdrawclear.Text = "CLEAR";
             this.withdrawclear.UseVisualStyleBackColor = false;
@@ -626,9 +628,9 @@
             // withdrawOk
             // 
             this.withdrawOk.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.withdrawOk.Location = new System.Drawing.Point(275, 97);
+            this.withdrawOk.Location = new System.Drawing.Point(309, 116);
             this.withdrawOk.Name = "withdrawOk";
-            this.withdrawOk.Size = new System.Drawing.Size(120, 41);
+            this.withdrawOk.Size = new System.Drawing.Size(86, 41);
             this.withdrawOk.TabIndex = 19;
             this.withdrawOk.Text = "OK";
             this.withdrawOk.UseVisualStyleBackColor = false;
@@ -655,18 +657,19 @@
             // 
             // withdrawback
             // 
-            this.withdrawback.Location = new System.Drawing.Point(105, 382);
+            this.withdrawback.BackColor = System.Drawing.Color.Gold;
+            this.withdrawback.Location = new System.Drawing.Point(309, 196);
             this.withdrawback.Name = "withdrawback";
-            this.withdrawback.Size = new System.Drawing.Size(164, 29);
+            this.withdrawback.Size = new System.Drawing.Size(86, 41);
             this.withdrawback.TabIndex = 16;
             this.withdrawback.Text = "Backspace";
-            this.withdrawback.UseVisualStyleBackColor = true;
+            this.withdrawback.UseVisualStyleBackColor = false;
             this.withdrawback.Click += new System.EventHandler(this.withdrawback_Click);
             // 
             // withdraw0
             // 
             this.withdraw0.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.withdraw0.Location = new System.Drawing.Point(20, 337);
+            this.withdraw0.Location = new System.Drawing.Point(105, 337);
             this.withdraw0.Name = "withdraw0";
             this.withdraw0.Size = new System.Drawing.Size(79, 74);
             this.withdraw0.TabIndex = 12;
@@ -810,9 +813,9 @@
             // dc
             // 
             this.dc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.dc.Location = new System.Drawing.Point(275, 144);
+            this.dc.Location = new System.Drawing.Point(309, 276);
             this.dc.Name = "dc";
-            this.dc.Size = new System.Drawing.Size(120, 41);
+            this.dc.Size = new System.Drawing.Size(86, 41);
             this.dc.TabIndex = 20;
             this.dc.Text = "CLEAR";
             this.dc.UseVisualStyleBackColor = false;
@@ -821,9 +824,9 @@
             // dok
             // 
             this.dok.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.dok.Location = new System.Drawing.Point(275, 97);
+            this.dok.Location = new System.Drawing.Point(309, 116);
             this.dok.Name = "dok";
-            this.dok.Size = new System.Drawing.Size(120, 41);
+            this.dok.Size = new System.Drawing.Size(86, 41);
             this.dok.TabIndex = 19;
             this.dok.Text = "OK";
             this.dok.UseVisualStyleBackColor = false;
@@ -850,18 +853,19 @@
             // 
             // db
             // 
-            this.db.Location = new System.Drawing.Point(105, 382);
+            this.db.BackColor = System.Drawing.Color.Gold;
+            this.db.Location = new System.Drawing.Point(309, 196);
             this.db.Name = "db";
-            this.db.Size = new System.Drawing.Size(164, 29);
+            this.db.Size = new System.Drawing.Size(86, 41);
             this.db.TabIndex = 16;
             this.db.Text = "Backspace";
-            this.db.UseVisualStyleBackColor = true;
+            this.db.UseVisualStyleBackColor = false;
             this.db.Click += new System.EventHandler(this.db_Click);
             // 
             // d0
             // 
             this.d0.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.d0.Location = new System.Drawing.Point(20, 337);
+            this.d0.Location = new System.Drawing.Point(105, 337);
             this.d0.Name = "d0";
             this.d0.Size = new System.Drawing.Size(79, 74);
             this.d0.TabIndex = 12;
@@ -1046,9 +1050,9 @@
             // tclearacc
             // 
             this.tclearacc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.tclearacc.Location = new System.Drawing.Point(275, 144);
+            this.tclearacc.Location = new System.Drawing.Point(309, 276);
             this.tclearacc.Name = "tclearacc";
-            this.tclearacc.Size = new System.Drawing.Size(120, 41);
+            this.tclearacc.Size = new System.Drawing.Size(86, 41);
             this.tclearacc.TabIndex = 20;
             this.tclearacc.Text = "CLEAR";
             this.tclearacc.UseVisualStyleBackColor = false;
@@ -1057,9 +1061,9 @@
             // taccok
             // 
             this.taccok.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.taccok.Location = new System.Drawing.Point(275, 97);
+            this.taccok.Location = new System.Drawing.Point(309, 116);
             this.taccok.Name = "taccok";
-            this.taccok.Size = new System.Drawing.Size(120, 41);
+            this.taccok.Size = new System.Drawing.Size(86, 41);
             this.taccok.TabIndex = 19;
             this.taccok.Text = "OK";
             this.taccok.UseVisualStyleBackColor = false;
@@ -1086,18 +1090,19 @@
             // 
             // taccback
             // 
-            this.taccback.Location = new System.Drawing.Point(105, 382);
+            this.taccback.BackColor = System.Drawing.Color.Gold;
+            this.taccback.Location = new System.Drawing.Point(309, 196);
             this.taccback.Name = "taccback";
-            this.taccback.Size = new System.Drawing.Size(164, 29);
+            this.taccback.Size = new System.Drawing.Size(86, 41);
             this.taccback.TabIndex = 16;
             this.taccback.Text = "Backspace";
-            this.taccback.UseVisualStyleBackColor = true;
+            this.taccback.UseVisualStyleBackColor = false;
             this.taccback.Click += new System.EventHandler(this.taccback_Click);
             // 
             // tacc0
             // 
             this.tacc0.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.tacc0.Location = new System.Drawing.Point(20, 337);
+            this.tacc0.Location = new System.Drawing.Point(105, 337);
             this.tacc0.Name = "tacc0";
             this.tacc0.Size = new System.Drawing.Size(79, 74);
             this.tacc0.TabIndex = 12;
@@ -1241,9 +1246,9 @@
             // tamountclear
             // 
             this.tamountclear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.tamountclear.Location = new System.Drawing.Point(275, 144);
+            this.tamountclear.Location = new System.Drawing.Point(309, 276);
             this.tamountclear.Name = "tamountclear";
-            this.tamountclear.Size = new System.Drawing.Size(120, 41);
+            this.tamountclear.Size = new System.Drawing.Size(86, 41);
             this.tamountclear.TabIndex = 20;
             this.tamountclear.Text = "CLEAR";
             this.tamountclear.UseVisualStyleBackColor = false;
@@ -1252,9 +1257,9 @@
             // tamountok
             // 
             this.tamountok.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.tamountok.Location = new System.Drawing.Point(275, 97);
+            this.tamountok.Location = new System.Drawing.Point(309, 116);
             this.tamountok.Name = "tamountok";
-            this.tamountok.Size = new System.Drawing.Size(120, 41);
+            this.tamountok.Size = new System.Drawing.Size(86, 41);
             this.tamountok.TabIndex = 19;
             this.tamountok.Text = "OK";
             this.tamountok.UseVisualStyleBackColor = false;
@@ -1281,18 +1286,19 @@
             // 
             // tamountback
             // 
-            this.tamountback.Location = new System.Drawing.Point(105, 382);
+            this.tamountback.BackColor = System.Drawing.Color.Gold;
+            this.tamountback.Location = new System.Drawing.Point(309, 196);
             this.tamountback.Name = "tamountback";
-            this.tamountback.Size = new System.Drawing.Size(164, 29);
+            this.tamountback.Size = new System.Drawing.Size(86, 41);
             this.tamountback.TabIndex = 16;
             this.tamountback.Text = "Backspace";
-            this.tamountback.UseVisualStyleBackColor = true;
+            this.tamountback.UseVisualStyleBackColor = false;
             this.tamountback.Click += new System.EventHandler(this.tamountback_Click);
             // 
             // tamount0
             // 
             this.tamount0.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.tamount0.Location = new System.Drawing.Point(20, 337);
+            this.tamount0.Location = new System.Drawing.Point(105, 337);
             this.tamount0.Name = "tamount0";
             this.tamount0.Size = new System.Drawing.Size(79, 74);
             this.tamount0.TabIndex = 12;
@@ -1406,12 +1412,12 @@
             this.ClientSize = new System.Drawing.Size(1362, 552);
             this.Controls.Add(this.tamountpanel);
             this.Controls.Add(this.transferpanelacc);
-            this.Controls.Add(this.viewpanel);
             this.Controls.Add(this.dpanel);
             this.Controls.Add(this.withdrawpanel);
             this.Controls.Add(this.PinPanel);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.usermain);
+            this.Controls.Add(this.viewpanel);
             this.Name = "AccountNumberForm";
             this.Text = "Account Number";
             this.panel1.ResumeLayout(false);
