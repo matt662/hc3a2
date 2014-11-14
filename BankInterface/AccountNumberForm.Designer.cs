@@ -46,6 +46,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.acancel = new System.Windows.Forms.Button();
             this.usermain = new System.Windows.Forms.Panel();
+            this.Welcome = new System.Windows.Forms.Label();
             this.SignOut = new System.Windows.Forms.Button();
             this.transferfunds = new System.Windows.Forms.Button();
             this.viewbalance = new System.Windows.Forms.Button();
@@ -150,7 +151,9 @@
             this.cashTakenActionButton = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.Welcome = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.usermain.SuspendLayout();
             this.PinPanel.SuspendLayout();
@@ -373,6 +376,16 @@
             this.usermain.Size = new System.Drawing.Size(414, 426);
             this.usermain.TabIndex = 17;
             this.usermain.Visible = false;
+            // 
+            // Welcome
+            // 
+            this.Welcome.AutoSize = true;
+            this.Welcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
+            this.Welcome.Location = new System.Drawing.Point(57, 20);
+            this.Welcome.Name = "Welcome";
+            this.Welcome.Size = new System.Drawing.Size(141, 31);
+            this.Welcome.TabIndex = 5;
+            this.Welcome.Text = "Welcome, ";
             // 
             // SignOut
             // 
@@ -622,6 +635,7 @@
             // 
             // withdrawpanel
             // 
+            this.withdrawpanel.Controls.Add(this.label7);
             this.withdrawpanel.Controls.Add(this.wcancel);
             this.withdrawpanel.Controls.Add(this.withdrawclear);
             this.withdrawpanel.Controls.Add(this.withdrawOk);
@@ -690,9 +704,9 @@
             // 
             this.withdrawbox.Enabled = false;
             this.withdrawbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.withdrawbox.Location = new System.Drawing.Point(20, 47);
+            this.withdrawbox.Location = new System.Drawing.Point(33, 47);
             this.withdrawbox.Name = "withdrawbox";
-            this.withdrawbox.Size = new System.Drawing.Size(249, 29);
+            this.withdrawbox.Size = new System.Drawing.Size(236, 29);
             this.withdrawbox.TabIndex = 17;
             // 
             // withdrawback
@@ -818,6 +832,7 @@
             // 
             // dpanel
             // 
+            this.dpanel.Controls.Add(this.label6);
             this.dpanel.Controls.Add(this.dcancel);
             this.dpanel.Controls.Add(this.dc);
             this.dpanel.Controls.Add(this.dok);
@@ -886,9 +901,9 @@
             // 
             this.dbox.Enabled = false;
             this.dbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.dbox.Location = new System.Drawing.Point(20, 47);
+            this.dbox.Location = new System.Drawing.Point(33, 47);
             this.dbox.Name = "dbox";
-            this.dbox.Size = new System.Drawing.Size(249, 29);
+            this.dbox.Size = new System.Drawing.Size(236, 29);
             this.dbox.TabIndex = 17;
             // 
             // db
@@ -1123,9 +1138,9 @@
             // 
             this.tacctext.Enabled = false;
             this.tacctext.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.tacctext.Location = new System.Drawing.Point(20, 47);
+            this.tacctext.Location = new System.Drawing.Point(21, 47);
             this.tacctext.Name = "tacctext";
-            this.tacctext.Size = new System.Drawing.Size(249, 29);
+            this.tacctext.Size = new System.Drawing.Size(248, 29);
             this.tacctext.TabIndex = 17;
             // 
             // taccback
@@ -1251,6 +1266,7 @@
             // 
             // tamountpanel
             // 
+            this.tamountpanel.Controls.Add(this.label8);
             this.tamountpanel.Controls.Add(this.tamountcancel);
             this.tamountpanel.Controls.Add(this.tamountclear);
             this.tamountpanel.Controls.Add(this.tamountok);
@@ -1319,9 +1335,9 @@
             // 
             this.tamounttext.Enabled = false;
             this.tamounttext.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.tamounttext.Location = new System.Drawing.Point(20, 47);
+            this.tamounttext.Location = new System.Drawing.Point(33, 47);
             this.tamounttext.Name = "tamounttext";
-            this.tamounttext.Size = new System.Drawing.Size(249, 29);
+            this.tamounttext.Size = new System.Drawing.Size(236, 29);
             this.tamounttext.TabIndex = 17;
             // 
             // tamountback
@@ -1547,15 +1563,38 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "Remove Cash from";
             // 
-            // Welcome
+            // label6
             // 
-            this.Welcome.AutoSize = true;
-            this.Welcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
-            this.Welcome.Location = new System.Drawing.Point(57, 20);
-            this.Welcome.Name = "Welcome";
-            this.Welcome.Size = new System.Drawing.Size(141, 31);
-            this.Welcome.TabIndex = 5;
-            this.Welcome.Text = "Welcome, ";
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label6.Location = new System.Drawing.Point(12, 49);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(20, 24);
+            this.label6.TabIndex = 23;
+            this.label6.Text = "$";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label7.Location = new System.Drawing.Point(10, 49);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(20, 24);
+            this.label7.TabIndex = 23;
+            this.label7.Text = "$";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label8.Location = new System.Drawing.Point(11, 49);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(20, 24);
+            this.label8.TabIndex = 23;
+            this.label8.Text = "$";
             // 
             // AccountNumberForm
             // 
@@ -1725,6 +1764,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label Welcome;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
     }
 }
 
