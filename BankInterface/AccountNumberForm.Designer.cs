@@ -44,13 +44,16 @@
             this.accountPadClear = new System.Windows.Forms.Button();
             this.accountBackspace = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.acancel = new System.Windows.Forms.Button();
             this.usermain = new System.Windows.Forms.Panel();
+            this.welcome = new System.Windows.Forms.Label();
             this.SignOut = new System.Windows.Forms.Button();
             this.transferfunds = new System.Windows.Forms.Button();
             this.viewbalance = new System.Windows.Forms.Button();
             this.depositbutton = new System.Windows.Forms.Button();
             this.withdrawbutton = new System.Windows.Forms.Button();
             this.PinPanel = new System.Windows.Forms.Panel();
+            this.pcancel = new System.Windows.Forms.Button();
             this.PinClear = new System.Windows.Forms.Button();
             this.PinOk = new System.Windows.Forms.Button();
             this.pinlabel = new System.Windows.Forms.Label();
@@ -143,8 +146,6 @@
             this.depositActionPanel = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.depositActionLabel = new System.Windows.Forms.Label();
-            this.pcancel = new System.Windows.Forms.Button();
-            this.acancel = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.usermain.SuspendLayout();
             this.PinPanel.SuspendLayout();
@@ -343,8 +344,19 @@
             this.panel1.TabIndex = 16;
             this.panel1.Visible = false;
             // 
+            // acancel
+            // 
+            this.acancel.Location = new System.Drawing.Point(333, 20);
+            this.acancel.Name = "acancel";
+            this.acancel.Size = new System.Drawing.Size(75, 23);
+            this.acancel.TabIndex = 22;
+            this.acancel.Text = "Cancel";
+            this.acancel.UseVisualStyleBackColor = true;
+            this.acancel.Click += new System.EventHandler(this.acancel_Click);
+            // 
             // usermain
             // 
+            this.usermain.Controls.Add(this.welcome);
             this.usermain.Controls.Add(this.SignOut);
             this.usermain.Controls.Add(this.transferfunds);
             this.usermain.Controls.Add(this.viewbalance);
@@ -355,6 +367,15 @@
             this.usermain.Size = new System.Drawing.Size(414, 426);
             this.usermain.TabIndex = 17;
             this.usermain.Visible = false;
+            // 
+            // welcome
+            // 
+            this.welcome.AutoSize = true;
+            this.welcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.welcome.Location = new System.Drawing.Point(66, 44);
+            this.welcome.Name = "welcome";
+            this.welcome.Size = new System.Drawing.Size(0, 24);
+            this.welcome.TabIndex = 5;
             // 
             // SignOut
             // 
@@ -429,6 +450,16 @@
             this.PinPanel.Size = new System.Drawing.Size(424, 426);
             this.PinPanel.TabIndex = 18;
             this.PinPanel.Visible = false;
+            // 
+            // pcancel
+            // 
+            this.pcancel.Location = new System.Drawing.Point(333, 20);
+            this.pcancel.Name = "pcancel";
+            this.pcancel.Size = new System.Drawing.Size(75, 23);
+            this.pcancel.TabIndex = 22;
+            this.pcancel.Text = "Cancel";
+            this.pcancel.UseVisualStyleBackColor = true;
+            this.pcancel.Click += new System.EventHandler(this.pcancel_Click);
             // 
             // PinClear
             // 
@@ -1466,32 +1497,11 @@
             this.depositActionLabel.TabIndex = 0;
             this.depositActionLabel.Text = "Insert deposit envelope";
             // 
-            // pcancel
-            // 
-            this.pcancel.Location = new System.Drawing.Point(333, 20);
-            this.pcancel.Name = "pcancel";
-            this.pcancel.Size = new System.Drawing.Size(75, 23);
-            this.pcancel.TabIndex = 22;
-            this.pcancel.Text = "Cancel";
-            this.pcancel.UseVisualStyleBackColor = true;
-            this.pcancel.Click += new System.EventHandler(this.pcancel_Click);
-            // 
-            // acancel
-            // 
-            this.acancel.Location = new System.Drawing.Point(333, 20);
-            this.acancel.Name = "acancel";
-            this.acancel.Size = new System.Drawing.Size(75, 23);
-            this.acancel.TabIndex = 22;
-            this.acancel.Text = "Cancel";
-            this.acancel.UseVisualStyleBackColor = true;
-            this.acancel.Click += new System.EventHandler(this.acancel_Click);
-            // 
             // AccountNumberForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1362, 552);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.usermain);
             this.Controls.Add(this.viewpanel);
             this.Controls.Add(this.depositActionPanel);
@@ -1501,11 +1511,13 @@
             this.Controls.Add(this.dpanel);
             this.Controls.Add(this.withdrawpanel);
             this.Controls.Add(this.PinPanel);
+            this.Controls.Add(this.panel1);
             this.Name = "AccountNumberForm";
             this.Text = "Account Number";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.usermain.ResumeLayout(false);
+            this.usermain.PerformLayout();
             this.PinPanel.ResumeLayout(false);
             this.PinPanel.PerformLayout();
             this.withdrawpanel.ResumeLayout(false);
@@ -1644,6 +1656,7 @@
         private System.Windows.Forms.Label depositActionLabel;
         private System.Windows.Forms.Button acancel;
         private System.Windows.Forms.Button pcancel;
+        private System.Windows.Forms.Label welcome;
     }
 }
 

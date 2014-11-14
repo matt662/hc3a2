@@ -152,6 +152,7 @@ namespace BankInterface
                     PinPanel.Visible = false;
                     usermain.BringToFront();
                     PinBox.Text = "";
+                    welcome.Text = "Welcome, " + Convert.ToString(userobj.getAccountNum(account));
                     usermain.Visible = true;
                   
                 }
@@ -678,7 +679,7 @@ namespace BankInterface
                 userobj.addMoney(toaccount, Convert.ToInt32(tamounttext.Text));
 
                 accountNumberBox.Text = "";
-                MessageBox.Show("Account not found", );
+                MessageBox.Show("Account not found");
 
                 tacctext.Text = "";
                 tamounttext.Text = "";
@@ -687,6 +688,9 @@ namespace BankInterface
                 tamountpanel.Visible = false;
             }
         }
+
+
+     
 
       
 
