@@ -44,12 +44,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PinNumberForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PinNumberForm.Designer.cs">
-      <DependentUpon>PinNumberForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="AccountNumberForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,9 +52,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="PinNumberForm.resx">
-      <DependentUpon>PinNumberForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="AccountNumberForm.resx">
       <DependentUpon>AccountNumberForm.cs</DependentUpon>
     </EmbeddedResource>
