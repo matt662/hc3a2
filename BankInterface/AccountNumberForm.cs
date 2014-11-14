@@ -517,8 +517,8 @@ namespace BankInterface
 
         private void tclearacc_Click(object sender, EventArgs e)
         {
-            if (dbox.Text.Length > 0)
-                dbox.Text = "";
+            if (tacctext.Text.Length > 0)
+                tacctext.Text = "";
         }
 
         private void taccok_Click(object sender, EventArgs e)
