@@ -50,6 +50,7 @@
     <Compile Include="AccountNumberForm.Designer.cs">
       <DependentUpon>AccountNumberForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Users.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AccountNumberForm.resx">

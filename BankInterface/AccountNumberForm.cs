@@ -12,6 +12,7 @@ namespace BankInterface
 {
     public partial class AccountNumberForm : Form
     {
+        public int account;
         public AccountNumberForm()
         {
             InitializeComponent();
@@ -75,10 +76,29 @@ namespace BankInterface
 
         private void accountPadOK_Click(object sender, EventArgs e)
         {
-            panel1.Visible = false;        
-            PinPanel.BringToFront();
-            PinPanel.Visible = true;
-            accountNumberBox.Text = "";
+
+            Boolean found = false;
+            for (int i = 0; i < Users.accounts.GetLength(1); i++)
+            {
+               
+                if(accountNumberBox.Text.Equals(Users.accounts[i].ToString()))
+                {
+                account = i;
+                panel1.Visible = false;
+                PinPanel.BringToFront();
+                PinPanel.Visible = true;
+                accountNumberBox.Text = "";
+                found = true;
+                break;
+                }
+            }
+
+            if(!found)
+            {
+                accountNumberBox.Text = "";
+            }
+
+            
         }
 
         private void accountPadClear_Click(object sender, EventArgs e)
@@ -98,10 +118,25 @@ namespace BankInterface
 
         private void PinOk_Click(object sender, EventArgs e)
         {
-            PinPanel.Visible = false;        
-            usermain.BringToFront();
-            PinBox.Text = "";
-            usermain.Visible = true;
+             
+
+                if (PinBox.Text.Equals(Users.pins[account].ToString()))
+                {
+
+                    PinPanel.Visible = false;
+                    usermain.BringToFront();
+                    PinBox.Text = "";
+                    usermain.Visible = true;
+                  
+                }
+            
+
+                else
+                {
+                   PinBox.Text = "";
+                }
+
+            
         }
 
         private void Pin1_Click(object sender, EventArgs e)
@@ -171,6 +206,7 @@ namespace BankInterface
 
         private void SignOut_Click(object sender, EventArgs e)
         {
+            account = -1;
             panel1.BringToFront();
             usermain.Visible = false;
             panel1.Visible = true;
@@ -261,11 +297,21 @@ namespace BankInterface
 
         private void withdrawOk_Click(object sender, EventArgs e)
         {
-            viewpanel.BringToFront();
-            withdrawpanel.Visible = false;
-            viewbox.Text = "My Balance";
-            withdrawbox.Text = "";
-            viewpanel.Visible = true;
+            if (Convert.ToInt32(withdrawbox.Text)<(Users.getMoney(account)))
+                {
+                    Users.loseMoney(account, Convert.ToInt32(withdrawbox.Text));
+                    viewpanel.BringToFront();
+                    withdrawpanel.Visible = false;
+                    viewbox.Text = "My Balance";
+                    withdrawbox.Text = "";
+                    viewpanel.Visible = true;
+                }
+
+                else
+                {
+                   
+                }
+           
             
         }
 
@@ -357,6 +403,7 @@ namespace BankInterface
 
         private void dok_Click(object sender, EventArgs e)
         {
+            Users.addMoney(account, Convert.ToInt32(withdrawbox.Text));
             viewpanel.BringToFront();
             dpanel.Visible = false;
             viewbox.Text = "My Balance";
