@@ -140,6 +140,9 @@
             this.tamount5 = new System.Windows.Forms.Button();
             this.firstpanel = new System.Windows.Forms.Panel();
             this.beginbutton = new System.Windows.Forms.Button();
+            this.depositActionPanel = new System.Windows.Forms.Panel();
+            this.depositActionLabel = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.usermain.SuspendLayout();
             this.PinPanel.SuspendLayout();
@@ -149,6 +152,7 @@
             this.transferpanelacc.SuspendLayout();
             this.tamountpanel.SuspendLayout();
             this.firstpanel.SuspendLayout();
+            this.depositActionPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // accountPad1
@@ -1429,11 +1433,41 @@
             this.beginbutton.UseVisualStyleBackColor = true;
             this.beginbutton.Click += new System.EventHandler(this.beginbutton_Click);
             // 
+            // depositActionPanel
+            // 
+            this.depositActionPanel.Controls.Add(this.label2);
+            this.depositActionPanel.Controls.Add(this.depositActionLabel);
+            this.depositActionPanel.Location = new System.Drawing.Point(23, 49);
+            this.depositActionPanel.Name = "depositActionPanel";
+            this.depositActionPanel.Size = new System.Drawing.Size(424, 426);
+            this.depositActionPanel.TabIndex = 25;
+            // 
+            // depositActionLabel
+            // 
+            this.depositActionLabel.AutoSize = true;
+            this.depositActionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
+            this.depositActionLabel.Location = new System.Drawing.Point(26, 154);
+            this.depositActionLabel.Name = "depositActionLabel";
+            this.depositActionLabel.Size = new System.Drawing.Size(369, 39);
+            this.depositActionLabel.TabIndex = 0;
+            this.depositActionLabel.Text = "Insert deposit envelope";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F);
+            this.label2.Location = new System.Drawing.Point(56, 200);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(309, 39);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "into slot to the right";
+            // 
             // AccountNumberForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1362, 552);
+            this.Controls.Add(this.depositActionPanel);
             this.Controls.Add(this.firstpanel);
             this.Controls.Add(this.tamountpanel);
             this.Controls.Add(this.transferpanelacc);
@@ -1461,6 +1495,8 @@
             this.tamountpanel.ResumeLayout(false);
             this.tamountpanel.PerformLayout();
             this.firstpanel.ResumeLayout(false);
+            this.depositActionPanel.ResumeLayout(false);
+            this.depositActionPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1579,6 +1615,9 @@
         private System.Windows.Forms.Button tamount5;
         private System.Windows.Forms.Panel firstpanel;
         private System.Windows.Forms.Button beginbutton;
+        private System.Windows.Forms.Panel depositActionPanel;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label depositActionLabel;
     }
 }
 
