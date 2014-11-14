@@ -67,6 +67,7 @@
             this.Pin6 = new System.Windows.Forms.Button();
             this.Pin5 = new System.Windows.Forms.Button();
             this.withdrawpanel = new System.Windows.Forms.Panel();
+            this.wcancel = new System.Windows.Forms.Button();
             this.withdrawclear = new System.Windows.Forms.Button();
             this.withdrawOk = new System.Windows.Forms.Button();
             this.withdrawlabel = new System.Windows.Forms.Label();
@@ -83,6 +84,7 @@
             this.withdraw6 = new System.Windows.Forms.Button();
             this.withdraw5 = new System.Windows.Forms.Button();
             this.dpanel = new System.Windows.Forms.Panel();
+            this.dcancel = new System.Windows.Forms.Button();
             this.dc = new System.Windows.Forms.Button();
             this.dok = new System.Windows.Forms.Button();
             this.dlabel = new System.Windows.Forms.Label();
@@ -102,14 +104,48 @@
             this.viewback = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.viewbox = new System.Windows.Forms.TextBox();
-            this.dcancel = new System.Windows.Forms.Button();
-            this.wcancel = new System.Windows.Forms.Button();
+            this.transferpanelacc = new System.Windows.Forms.Panel();
+            this.tcancelacc = new System.Windows.Forms.Button();
+            this.tclearacc = new System.Windows.Forms.Button();
+            this.taccok = new System.Windows.Forms.Button();
+            this.taccinfo = new System.Windows.Forms.Label();
+            this.tacctext = new System.Windows.Forms.TextBox();
+            this.taccback = new System.Windows.Forms.Button();
+            this.tacc0 = new System.Windows.Forms.Button();
+            this.tacc1 = new System.Windows.Forms.Button();
+            this.tacc2 = new System.Windows.Forms.Button();
+            this.tacc3 = new System.Windows.Forms.Button();
+            this.tacc4 = new System.Windows.Forms.Button();
+            this.tacc7 = new System.Windows.Forms.Button();
+            this.tacc8 = new System.Windows.Forms.Button();
+            this.tacc9 = new System.Windows.Forms.Button();
+            this.tacc6 = new System.Windows.Forms.Button();
+            this.tacc5 = new System.Windows.Forms.Button();
+            this.tamountpanel = new System.Windows.Forms.Panel();
+            this.tamountcancel = new System.Windows.Forms.Button();
+            this.tamountclear = new System.Windows.Forms.Button();
+            this.tamountok = new System.Windows.Forms.Button();
+            this.tamountinfo = new System.Windows.Forms.Label();
+            this.tamounttext = new System.Windows.Forms.TextBox();
+            this.tamountback = new System.Windows.Forms.Button();
+            this.tamount0 = new System.Windows.Forms.Button();
+            this.tamount1 = new System.Windows.Forms.Button();
+            this.tamount2 = new System.Windows.Forms.Button();
+            this.tamount3 = new System.Windows.Forms.Button();
+            this.tamount4 = new System.Windows.Forms.Button();
+            this.tamount7 = new System.Windows.Forms.Button();
+            this.tamount8 = new System.Windows.Forms.Button();
+            this.tamount9 = new System.Windows.Forms.Button();
+            this.tamount6 = new System.Windows.Forms.Button();
+            this.tamount5 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.usermain.SuspendLayout();
             this.PinPanel.SuspendLayout();
             this.withdrawpanel.SuspendLayout();
             this.dpanel.SuspendLayout();
             this.viewpanel.SuspendLayout();
+            this.transferpanelacc.SuspendLayout();
+            this.tamountpanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // accountPad1
@@ -566,6 +602,16 @@
             this.withdrawpanel.TabIndex = 19;
             this.withdrawpanel.Visible = false;
             // 
+            // wcancel
+            // 
+            this.wcancel.Location = new System.Drawing.Point(333, 20);
+            this.wcancel.Name = "wcancel";
+            this.wcancel.Size = new System.Drawing.Size(75, 23);
+            this.wcancel.TabIndex = 21;
+            this.wcancel.Text = "Cancel";
+            this.wcancel.UseVisualStyleBackColor = true;
+            this.wcancel.Click += new System.EventHandler(this.wcancel_Click);
+            // 
             // withdrawclear
             // 
             this.withdrawclear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
@@ -751,6 +797,16 @@
             this.dpanel.TabIndex = 20;
             this.dpanel.Visible = false;
             // 
+            // dcancel
+            // 
+            this.dcancel.Location = new System.Drawing.Point(333, 20);
+            this.dcancel.Name = "dcancel";
+            this.dcancel.Size = new System.Drawing.Size(75, 23);
+            this.dcancel.TabIndex = 21;
+            this.dcancel.Text = "Cancel";
+            this.dcancel.UseVisualStyleBackColor = true;
+            this.dcancel.Click += new System.EventHandler(this.dcancel_Click);
+            // 
             // dc
             // 
             this.dc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
@@ -917,11 +973,12 @@
             this.viewpanel.Controls.Add(this.viewback);
             this.viewpanel.Controls.Add(this.label1);
             this.viewpanel.Controls.Add(this.viewbox);
-            this.viewpanel.Location = new System.Drawing.Point(515, 49);
+            this.viewpanel.Location = new System.Drawing.Point(23, 49);
             this.viewpanel.Name = "viewpanel";
             this.viewpanel.Size = new System.Drawing.Size(424, 426);
             this.viewpanel.TabIndex = 21;
             this.viewpanel.Visible = false;
+            this.viewpanel.Paint += new System.Windows.Forms.PaintEventHandler(this.viewpanel_Paint);
             // 
             // viewback
             // 
@@ -952,31 +1009,403 @@
             this.viewbox.Size = new System.Drawing.Size(249, 29);
             this.viewbox.TabIndex = 17;
             // 
-            // dcancel
+            // transferpanelacc
             // 
-            this.dcancel.Location = new System.Drawing.Point(333, 20);
-            this.dcancel.Name = "dcancel";
-            this.dcancel.Size = new System.Drawing.Size(75, 23);
-            this.dcancel.TabIndex = 21;
-            this.dcancel.Text = "Cancel";
-            this.dcancel.UseVisualStyleBackColor = true;
-            this.dcancel.Click += new System.EventHandler(this.dcancel_Click);
+            this.transferpanelacc.Controls.Add(this.tcancelacc);
+            this.transferpanelacc.Controls.Add(this.tclearacc);
+            this.transferpanelacc.Controls.Add(this.taccok);
+            this.transferpanelacc.Controls.Add(this.taccinfo);
+            this.transferpanelacc.Controls.Add(this.tacctext);
+            this.transferpanelacc.Controls.Add(this.taccback);
+            this.transferpanelacc.Controls.Add(this.tacc0);
+            this.transferpanelacc.Controls.Add(this.tacc1);
+            this.transferpanelacc.Controls.Add(this.tacc2);
+            this.transferpanelacc.Controls.Add(this.tacc3);
+            this.transferpanelacc.Controls.Add(this.tacc4);
+            this.transferpanelacc.Controls.Add(this.tacc7);
+            this.transferpanelacc.Controls.Add(this.tacc8);
+            this.transferpanelacc.Controls.Add(this.tacc9);
+            this.transferpanelacc.Controls.Add(this.tacc6);
+            this.transferpanelacc.Controls.Add(this.tacc5);
+            this.transferpanelacc.Location = new System.Drawing.Point(911, 49);
+            this.transferpanelacc.Name = "transferpanelacc";
+            this.transferpanelacc.Size = new System.Drawing.Size(424, 426);
+            this.transferpanelacc.TabIndex = 22;
+            this.transferpanelacc.Visible = false;
             // 
-            // wcancel
+            // tcancelacc
             // 
-            this.wcancel.Location = new System.Drawing.Point(333, 20);
-            this.wcancel.Name = "wcancel";
-            this.wcancel.Size = new System.Drawing.Size(75, 23);
-            this.wcancel.TabIndex = 21;
-            this.wcancel.Text = "Cancel";
-            this.wcancel.UseVisualStyleBackColor = true;
-            this.wcancel.Click += new System.EventHandler(this.wcancel_Click);
+            this.tcancelacc.Location = new System.Drawing.Point(333, 20);
+            this.tcancelacc.Name = "tcancelacc";
+            this.tcancelacc.Size = new System.Drawing.Size(75, 23);
+            this.tcancelacc.TabIndex = 21;
+            this.tcancelacc.Text = "Cancel";
+            this.tcancelacc.UseVisualStyleBackColor = true;
+            this.tcancelacc.Click += new System.EventHandler(this.tcancelacc_Click);
+            // 
+            // tclearacc
+            // 
+            this.tclearacc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.tclearacc.Location = new System.Drawing.Point(275, 144);
+            this.tclearacc.Name = "tclearacc";
+            this.tclearacc.Size = new System.Drawing.Size(120, 41);
+            this.tclearacc.TabIndex = 20;
+            this.tclearacc.Text = "CLEAR";
+            this.tclearacc.UseVisualStyleBackColor = false;
+            this.tclearacc.Click += new System.EventHandler(this.tclearacc_Click);
+            // 
+            // taccok
+            // 
+            this.taccok.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.taccok.Location = new System.Drawing.Point(275, 97);
+            this.taccok.Name = "taccok";
+            this.taccok.Size = new System.Drawing.Size(120, 41);
+            this.taccok.TabIndex = 19;
+            this.taccok.Text = "OK";
+            this.taccok.UseVisualStyleBackColor = false;
+            this.taccok.Click += new System.EventHandler(this.taccok_Click);
+            // 
+            // taccinfo
+            // 
+            this.taccinfo.AutoSize = true;
+            this.taccinfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.taccinfo.Location = new System.Drawing.Point(17, 20);
+            this.taccinfo.Name = "taccinfo";
+            this.taccinfo.Size = new System.Drawing.Size(247, 24);
+            this.taccinfo.TabIndex = 18;
+            this.taccinfo.Text = "Transfer to account number:";
+            // 
+            // tacctext
+            // 
+            this.tacctext.Enabled = false;
+            this.tacctext.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.tacctext.Location = new System.Drawing.Point(20, 47);
+            this.tacctext.Name = "tacctext";
+            this.tacctext.Size = new System.Drawing.Size(249, 29);
+            this.tacctext.TabIndex = 17;
+            // 
+            // taccback
+            // 
+            this.taccback.Location = new System.Drawing.Point(105, 382);
+            this.taccback.Name = "taccback";
+            this.taccback.Size = new System.Drawing.Size(164, 29);
+            this.taccback.TabIndex = 16;
+            this.taccback.Text = "Backspace";
+            this.taccback.UseVisualStyleBackColor = true;
+            this.taccback.Click += new System.EventHandler(this.taccback_Click);
+            // 
+            // tacc0
+            // 
+            this.tacc0.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.tacc0.Location = new System.Drawing.Point(20, 337);
+            this.tacc0.Name = "tacc0";
+            this.tacc0.Size = new System.Drawing.Size(79, 74);
+            this.tacc0.TabIndex = 12;
+            this.tacc0.Text = "0";
+            this.tacc0.UseVisualStyleBackColor = true;
+            this.tacc0.Click += new System.EventHandler(this.tacc0_Click);
+            // 
+            // tacc1
+            // 
+            this.tacc1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.tacc1.Location = new System.Drawing.Point(21, 97);
+            this.tacc1.Name = "tacc1";
+            this.tacc1.Size = new System.Drawing.Size(79, 74);
+            this.tacc1.TabIndex = 11;
+            this.tacc1.Text = "1";
+            this.tacc1.UseVisualStyleBackColor = true;
+            this.tacc1.Click += new System.EventHandler(this.tacc1_Click);
+            // 
+            // tacc2
+            // 
+            this.tacc2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.tacc2.Location = new System.Drawing.Point(105, 97);
+            this.tacc2.Name = "tacc2";
+            this.tacc2.Size = new System.Drawing.Size(79, 74);
+            this.tacc2.TabIndex = 10;
+            this.tacc2.Text = "2";
+            this.tacc2.UseVisualStyleBackColor = true;
+            this.tacc2.Click += new System.EventHandler(this.tacc2_Click);
+            // 
+            // tacc3
+            // 
+            this.tacc3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.tacc3.Location = new System.Drawing.Point(190, 97);
+            this.tacc3.Name = "tacc3";
+            this.tacc3.Size = new System.Drawing.Size(79, 74);
+            this.tacc3.TabIndex = 9;
+            this.tacc3.Text = "3";
+            this.tacc3.UseVisualStyleBackColor = true;
+            this.tacc3.Click += new System.EventHandler(this.tacc3_Click);
+            // 
+            // tacc4
+            // 
+            this.tacc4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.tacc4.Location = new System.Drawing.Point(20, 177);
+            this.tacc4.Name = "tacc4";
+            this.tacc4.Size = new System.Drawing.Size(79, 74);
+            this.tacc4.TabIndex = 8;
+            this.tacc4.Text = "4";
+            this.tacc4.UseVisualStyleBackColor = true;
+            this.tacc4.Click += new System.EventHandler(this.tacc4_Click);
+            // 
+            // tacc7
+            // 
+            this.tacc7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.tacc7.Location = new System.Drawing.Point(20, 257);
+            this.tacc7.Name = "tacc7";
+            this.tacc7.Size = new System.Drawing.Size(79, 74);
+            this.tacc7.TabIndex = 7;
+            this.tacc7.Text = "7";
+            this.tacc7.UseVisualStyleBackColor = true;
+            this.tacc7.Click += new System.EventHandler(this.tacc7_Click);
+            // 
+            // tacc8
+            // 
+            this.tacc8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.tacc8.Location = new System.Drawing.Point(105, 257);
+            this.tacc8.Name = "tacc8";
+            this.tacc8.Size = new System.Drawing.Size(79, 74);
+            this.tacc8.TabIndex = 6;
+            this.tacc8.Text = "8";
+            this.tacc8.UseVisualStyleBackColor = true;
+            this.tacc8.Click += new System.EventHandler(this.tacc8_Click);
+            // 
+            // tacc9
+            // 
+            this.tacc9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.tacc9.Location = new System.Drawing.Point(190, 257);
+            this.tacc9.Name = "tacc9";
+            this.tacc9.Size = new System.Drawing.Size(79, 74);
+            this.tacc9.TabIndex = 5;
+            this.tacc9.Text = "9";
+            this.tacc9.UseVisualStyleBackColor = true;
+            this.tacc9.Click += new System.EventHandler(this.tacc9_Click);
+            // 
+            // tacc6
+            // 
+            this.tacc6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.tacc6.Location = new System.Drawing.Point(190, 177);
+            this.tacc6.Name = "tacc6";
+            this.tacc6.Size = new System.Drawing.Size(79, 74);
+            this.tacc6.TabIndex = 4;
+            this.tacc6.Text = "6";
+            this.tacc6.UseVisualStyleBackColor = true;
+            this.tacc6.Click += new System.EventHandler(this.tacc6_Click);
+            // 
+            // tacc5
+            // 
+            this.tacc5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.tacc5.Location = new System.Drawing.Point(105, 177);
+            this.tacc5.Name = "tacc5";
+            this.tacc5.Size = new System.Drawing.Size(79, 74);
+            this.tacc5.TabIndex = 3;
+            this.tacc5.Text = "5";
+            this.tacc5.UseVisualStyleBackColor = true;
+            this.tacc5.Click += new System.EventHandler(this.tacc5_Click);
+            // 
+            // tamountpanel
+            // 
+            this.tamountpanel.Controls.Add(this.tamountcancel);
+            this.tamountpanel.Controls.Add(this.tamountclear);
+            this.tamountpanel.Controls.Add(this.tamountok);
+            this.tamountpanel.Controls.Add(this.tamountinfo);
+            this.tamountpanel.Controls.Add(this.tamounttext);
+            this.tamountpanel.Controls.Add(this.tamountback);
+            this.tamountpanel.Controls.Add(this.tamount0);
+            this.tamountpanel.Controls.Add(this.tamount1);
+            this.tamountpanel.Controls.Add(this.tamount2);
+            this.tamountpanel.Controls.Add(this.tamount3);
+            this.tamountpanel.Controls.Add(this.tamount4);
+            this.tamountpanel.Controls.Add(this.tamount7);
+            this.tamountpanel.Controls.Add(this.tamount8);
+            this.tamountpanel.Controls.Add(this.tamount9);
+            this.tamountpanel.Controls.Add(this.tamount6);
+            this.tamountpanel.Controls.Add(this.tamount5);
+            this.tamountpanel.Location = new System.Drawing.Point(464, 49);
+            this.tamountpanel.Name = "tamountpanel";
+            this.tamountpanel.Size = new System.Drawing.Size(424, 426);
+            this.tamountpanel.TabIndex = 23;
+            this.tamountpanel.Visible = false;
+            // 
+            // tamountcancel
+            // 
+            this.tamountcancel.Location = new System.Drawing.Point(333, 20);
+            this.tamountcancel.Name = "tamountcancel";
+            this.tamountcancel.Size = new System.Drawing.Size(75, 23);
+            this.tamountcancel.TabIndex = 21;
+            this.tamountcancel.Text = "Cancel";
+            this.tamountcancel.UseVisualStyleBackColor = true;
+            this.tamountcancel.Click += new System.EventHandler(this.tamountcancel_Click);
+            // 
+            // tamountclear
+            // 
+            this.tamountclear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.tamountclear.Location = new System.Drawing.Point(275, 144);
+            this.tamountclear.Name = "tamountclear";
+            this.tamountclear.Size = new System.Drawing.Size(120, 41);
+            this.tamountclear.TabIndex = 20;
+            this.tamountclear.Text = "CLEAR";
+            this.tamountclear.UseVisualStyleBackColor = false;
+            this.tamountclear.Click += new System.EventHandler(this.tamountclear_Click);
+            // 
+            // tamountok
+            // 
+            this.tamountok.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.tamountok.Location = new System.Drawing.Point(275, 97);
+            this.tamountok.Name = "tamountok";
+            this.tamountok.Size = new System.Drawing.Size(120, 41);
+            this.tamountok.TabIndex = 19;
+            this.tamountok.Text = "OK";
+            this.tamountok.UseVisualStyleBackColor = false;
+            this.tamountok.Click += new System.EventHandler(this.tamountok_Click);
+            // 
+            // tamountinfo
+            // 
+            this.tamountinfo.AutoSize = true;
+            this.tamountinfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.tamountinfo.Location = new System.Drawing.Point(17, 20);
+            this.tamountinfo.Name = "tamountinfo";
+            this.tamountinfo.Size = new System.Drawing.Size(167, 24);
+            this.tamountinfo.TabIndex = 18;
+            this.tamountinfo.Text = "Amount to transfer:";
+            // 
+            // tamounttext
+            // 
+            this.tamounttext.Enabled = false;
+            this.tamounttext.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.tamounttext.Location = new System.Drawing.Point(20, 47);
+            this.tamounttext.Name = "tamounttext";
+            this.tamounttext.Size = new System.Drawing.Size(249, 29);
+            this.tamounttext.TabIndex = 17;
+            // 
+            // tamountback
+            // 
+            this.tamountback.Location = new System.Drawing.Point(105, 382);
+            this.tamountback.Name = "tamountback";
+            this.tamountback.Size = new System.Drawing.Size(164, 29);
+            this.tamountback.TabIndex = 16;
+            this.tamountback.Text = "Backspace";
+            this.tamountback.UseVisualStyleBackColor = true;
+            this.tamountback.Click += new System.EventHandler(this.tamountback_Click);
+            // 
+            // tamount0
+            // 
+            this.tamount0.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.tamount0.Location = new System.Drawing.Point(20, 337);
+            this.tamount0.Name = "tamount0";
+            this.tamount0.Size = new System.Drawing.Size(79, 74);
+            this.tamount0.TabIndex = 12;
+            this.tamount0.Text = "0";
+            this.tamount0.UseVisualStyleBackColor = true;
+            this.tamount0.Click += new System.EventHandler(this.tamount0_Click);
+            // 
+            // tamount1
+            // 
+            this.tamount1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.tamount1.Location = new System.Drawing.Point(21, 97);
+            this.tamount1.Name = "tamount1";
+            this.tamount1.Size = new System.Drawing.Size(79, 74);
+            this.tamount1.TabIndex = 11;
+            this.tamount1.Text = "1";
+            this.tamount1.UseVisualStyleBackColor = true;
+            this.tamount1.Click += new System.EventHandler(this.tamount1_Click);
+            // 
+            // tamount2
+            // 
+            this.tamount2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.tamount2.Location = new System.Drawing.Point(105, 97);
+            this.tamount2.Name = "tamount2";
+            this.tamount2.Size = new System.Drawing.Size(79, 74);
+            this.tamount2.TabIndex = 10;
+            this.tamount2.Text = "2";
+            this.tamount2.UseVisualStyleBackColor = true;
+            this.tamount2.Click += new System.EventHandler(this.tamount2_Click);
+            // 
+            // tamount3
+            // 
+            this.tamount3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.tamount3.Location = new System.Drawing.Point(190, 97);
+            this.tamount3.Name = "tamount3";
+            this.tamount3.Size = new System.Drawing.Size(79, 74);
+            this.tamount3.TabIndex = 9;
+            this.tamount3.Text = "3";
+            this.tamount3.UseVisualStyleBackColor = true;
+            this.tamount3.Click += new System.EventHandler(this.tamount3_Click);
+            // 
+            // tamount4
+            // 
+            this.tamount4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.tamount4.Location = new System.Drawing.Point(20, 177);
+            this.tamount4.Name = "tamount4";
+            this.tamount4.Size = new System.Drawing.Size(79, 74);
+            this.tamount4.TabIndex = 8;
+            this.tamount4.Text = "4";
+            this.tamount4.UseVisualStyleBackColor = true;
+            this.tamount4.Click += new System.EventHandler(this.tamount4_Click);
+            // 
+            // tamount7
+            // 
+            this.tamount7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.tamount7.Location = new System.Drawing.Point(20, 257);
+            this.tamount7.Name = "tamount7";
+            this.tamount7.Size = new System.Drawing.Size(79, 74);
+            this.tamount7.TabIndex = 7;
+            this.tamount7.Text = "7";
+            this.tamount7.UseVisualStyleBackColor = true;
+            this.tamount7.Click += new System.EventHandler(this.tamount7_Click);
+            // 
+            // tamount8
+            // 
+            this.tamount8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.tamount8.Location = new System.Drawing.Point(105, 257);
+            this.tamount8.Name = "tamount8";
+            this.tamount8.Size = new System.Drawing.Size(79, 74);
+            this.tamount8.TabIndex = 6;
+            this.tamount8.Text = "8";
+            this.tamount8.UseVisualStyleBackColor = true;
+            this.tamount8.Click += new System.EventHandler(this.tamount8_Click);
+            // 
+            // tamount9
+            // 
+            this.tamount9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.tamount9.Location = new System.Drawing.Point(190, 257);
+            this.tamount9.Name = "tamount9";
+            this.tamount9.Size = new System.Drawing.Size(79, 74);
+            this.tamount9.TabIndex = 5;
+            this.tamount9.Text = "9";
+            this.tamount9.UseVisualStyleBackColor = true;
+            this.tamount9.Click += new System.EventHandler(this.tamount9_Click);
+            // 
+            // tamount6
+            // 
+            this.tamount6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.tamount6.Location = new System.Drawing.Point(190, 177);
+            this.tamount6.Name = "tamount6";
+            this.tamount6.Size = new System.Drawing.Size(79, 74);
+            this.tamount6.TabIndex = 4;
+            this.tamount6.Text = "6";
+            this.tamount6.UseVisualStyleBackColor = true;
+            this.tamount6.Click += new System.EventHandler(this.tamount6_Click);
+            // 
+            // tamount5
+            // 
+            this.tamount5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.tamount5.Location = new System.Drawing.Point(105, 177);
+            this.tamount5.Name = "tamount5";
+            this.tamount5.Size = new System.Drawing.Size(79, 74);
+            this.tamount5.TabIndex = 3;
+            this.tamount5.Text = "5";
+            this.tamount5.UseVisualStyleBackColor = true;
+            this.tamount5.Click += new System.EventHandler(this.tamount5_Click);
             // 
             // AccountNumberForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1362, 552);
+            this.Controls.Add(this.tamountpanel);
+            this.Controls.Add(this.transferpanelacc);
             this.Controls.Add(this.viewpanel);
             this.Controls.Add(this.dpanel);
             this.Controls.Add(this.withdrawpanel);
@@ -996,6 +1425,10 @@
             this.dpanel.PerformLayout();
             this.viewpanel.ResumeLayout(false);
             this.viewpanel.PerformLayout();
+            this.transferpanelacc.ResumeLayout(false);
+            this.transferpanelacc.PerformLayout();
+            this.tamountpanel.ResumeLayout(false);
+            this.tamountpanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1078,6 +1511,40 @@
         private System.Windows.Forms.Button viewback;
         private System.Windows.Forms.Button dcancel;
         private System.Windows.Forms.Button wcancel;
+        private System.Windows.Forms.Panel transferpanelacc;
+        private System.Windows.Forms.Button tcancelacc;
+        private System.Windows.Forms.Button tclearacc;
+        private System.Windows.Forms.Button taccok;
+        private System.Windows.Forms.Label taccinfo;
+        private System.Windows.Forms.TextBox tacctext;
+        private System.Windows.Forms.Button taccback;
+        private System.Windows.Forms.Button tacc0;
+        private System.Windows.Forms.Button tacc1;
+        private System.Windows.Forms.Button tacc2;
+        private System.Windows.Forms.Button tacc3;
+        private System.Windows.Forms.Button tacc4;
+        private System.Windows.Forms.Button tacc7;
+        private System.Windows.Forms.Button tacc8;
+        private System.Windows.Forms.Button tacc9;
+        private System.Windows.Forms.Button tacc6;
+        private System.Windows.Forms.Button tacc5;
+        private System.Windows.Forms.Panel tamountpanel;
+        private System.Windows.Forms.Button tamountcancel;
+        private System.Windows.Forms.Button tamountclear;
+        private System.Windows.Forms.Button tamountok;
+        private System.Windows.Forms.Label tamountinfo;
+        private System.Windows.Forms.TextBox tamounttext;
+        private System.Windows.Forms.Button tamountback;
+        private System.Windows.Forms.Button tamount0;
+        private System.Windows.Forms.Button tamount1;
+        private System.Windows.Forms.Button tamount2;
+        private System.Windows.Forms.Button tamount3;
+        private System.Windows.Forms.Button tamount4;
+        private System.Windows.Forms.Button tamount7;
+        private System.Windows.Forms.Button tamount8;
+        private System.Windows.Forms.Button tamount9;
+        private System.Windows.Forms.Button tamount6;
+        private System.Windows.Forms.Button tamount5;
     }
 }
 

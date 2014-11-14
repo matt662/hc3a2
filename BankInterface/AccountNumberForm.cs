@@ -232,14 +232,13 @@ namespace BankInterface
             viewpanel.BringToFront();
             usermain.Visible = false;
             viewpanel.Visible = true;
-
-            string balance = "My Balance";
-            viewbox.Text = balance;
         }
 
         private void transferfunds_Click(object sender, EventArgs e)
         {
-
+            transferpanelacc.BringToFront();
+            usermain.Visible = false;
+            transferpanelacc.Visible = true;
         }
 
         //#####                      #####
@@ -310,7 +309,7 @@ namespace BankInterface
 
                 else
                 {
-                   
+                   // add text to error box
                 }
            
             
@@ -432,7 +431,177 @@ namespace BankInterface
             usermain.Visible = true;
         }
 
-     
+        private void viewpanel_Paint(object sender, PaintEventArgs e)
+        {
+            viewbox.Text = Convert.ToString(userobj.getMoney(account));
+        }
+
+        //#####                              #####
+        //##### START TRANSFER ACCOUNT PANEL #####
+        //#####                              #####
+
+        private void tacc1_Click(object sender, EventArgs e)
+        {
+            tacctext.AppendText("1");
+        }
+
+        private void tacc2_Click(object sender, EventArgs e)
+        {
+            tacctext.AppendText("2");
+        }
+
+        private void tacc3_Click(object sender, EventArgs e)
+        {
+            tacctext.AppendText("3");
+        }
+
+        private void tacc4_Click(object sender, EventArgs e)
+        {
+            tacctext.AppendText("4");
+        }
+
+        private void tacc5_Click(object sender, EventArgs e)
+        {
+            tacctext.AppendText("5");
+        }
+
+        private void tacc6_Click(object sender, EventArgs e)
+        {
+            tacctext.AppendText("6");
+        }
+
+        private void tacc7_Click(object sender, EventArgs e)
+        {
+            tacctext.AppendText("7");
+        }
+
+        private void tacc8_Click(object sender, EventArgs e)
+        {
+            tacctext.AppendText("8");
+        }
+
+        private void tacc9_Click(object sender, EventArgs e)
+        {
+            tacctext.AppendText("9");
+        }
+
+        private void tacc0_Click(object sender, EventArgs e)
+        {
+            tacctext.AppendText("0");
+        }
+
+        private void taccback_Click(object sender, EventArgs e)
+        {
+            if (tacctext.Text.Length > 0)
+                tacctext.Text = tacctext.Text.Remove((tacctext.Text.Length - 1), 1);
+        }
+
+        private void tclearacc_Click(object sender, EventArgs e)
+        {
+            if (dbox.Text.Length > 0)
+                dbox.Text = "";
+        }
+
+        private void taccok_Click(object sender, EventArgs e)
+        {
+            tamountpanel.BringToFront();
+            tamountpanel.Visible = true;
+            transferpanelacc.Visible = false;
+        }
+
+        private void tcancelacc_Click(object sender, EventArgs e)
+        {
+            tacctext.Text = "";
+            usermain.BringToFront();
+            usermain.Visible = true;
+            transferpanelacc.Visible = false;
+        }
+
+        //#####                             #####
+        //##### START TRANSFER AMOUNT PANEL #####
+        //#####                             #####
+
+        private void tamount1_Click(object sender, EventArgs e)
+        {
+            tamounttext.AppendText("1");
+        }
+
+        private void tamount2_Click(object sender, EventArgs e)
+        {
+            tamounttext.AppendText("2");
+        }
+
+        private void tamount3_Click(object sender, EventArgs e)
+        {
+            tamounttext.AppendText("3");
+        }
+
+        private void tamount4_Click(object sender, EventArgs e)
+        {
+            tamounttext.AppendText("4");
+        }
+
+        private void tamount5_Click(object sender, EventArgs e)
+        {
+            tamounttext.AppendText("5");
+        }
+
+        private void tamount6_Click(object sender, EventArgs e)
+        {
+            tamounttext.AppendText("6");
+        }
+
+        private void tamount7_Click(object sender, EventArgs e)
+        {
+            tamounttext.AppendText("7");
+        }
+
+        private void tamount8_Click(object sender, EventArgs e)
+        {
+            tamounttext.AppendText("8");
+        }
+
+        private void tamount9_Click(object sender, EventArgs e)
+        {
+            tamounttext.AppendText("9");
+        }
+
+        private void tamount0_Click(object sender, EventArgs e)
+        {
+            tamounttext.AppendText("6");
+        }
+
+        private void tamountback_Click(object sender, EventArgs e)
+        {
+            if (tamounttext.Text.Length > 0)
+                tamounttext.Text = tamounttext.Text.Remove((tamounttext.Text.Length - 1), 1);
+        }
+
+        private void tamountclear_Click(object sender, EventArgs e)
+        {
+            if (tamounttext.Text.Length > 0)
+                tamounttext.Text = "";
+        }
+
+        private void tamountcancel_Click(object sender, EventArgs e)
+        {
+            tacctext.Text = "";
+            tamounttext.Text = "";
+            usermain.BringToFront();
+            usermain.Visible = true;
+            tamountpanel.Visible = false;
+        }
+
+        private void tamountok_Click(object sender, EventArgs e)
+        {
+            tacctext.Text = "";
+            tamounttext.Text = "";
+            usermain.BringToFront();
+            usermain.Visible = true;
+            tamountpanel.Visible = false;
+
+            //add logic
+        }
 
         
     }
