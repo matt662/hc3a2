@@ -333,7 +333,7 @@ namespace BankInterface
         private void withdrawOk_Click(object sender, EventArgs e)
         {
             float balance = 0;
-            if (withdrawbox.Text == "")
+            if (withdrawbox.Text == ""||withdrawbox.Text=="0")
             {
                 MessageBox.Show(string.Format("Invalid Entry", "Error"));
             }
@@ -456,7 +456,7 @@ namespace BankInterface
         private void dok_Click(object sender, EventArgs e)
         {
 
-            if (dbox.Text == "")
+            if (dbox.Text == ""||dbox.Text=="0")
             {
                 MessageBox.Show(string.Format("Invalid Entry", "Error"));
             }
