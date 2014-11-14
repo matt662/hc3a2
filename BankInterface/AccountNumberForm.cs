@@ -657,7 +657,7 @@ namespace BankInterface
 
         private void tamount0_Click(object sender, EventArgs e)
         {
-            tamounttext.AppendText("6");
+            tamounttext.AppendText("0");
         }
 
         private void tamountback_Click(object sender, EventArgs e)
@@ -697,18 +697,46 @@ namespace BankInterface
             
             else 
             {
-                userobj.loseMoney(account, Convert.ToInt32(tamounttext.Text));
-                userobj.addMoney(toaccount, Convert.ToInt32(tamounttext.Text));
-
-                accountNumberBox.Text = "";
-                MessageBox.Show("Account not found");
-
-                tacctext.Text = "";
-                tamounttext.Text = "";
-                usermain.BringToFront();
-                usermain.Visible = true;
+                TransConfirmPanel.BringToFront();
+                TransConfirmPanel.Visible = true;
                 tamountpanel.Visible = false;
             }
         }
+
+        //#####                              #####
+        //##### START TRANSFER CONFIRM PANEL #####
+        //#####                              #####
+
+        private void confirmok_Click(object sender, EventArgs e)
+        {
+            userobj.loseMoney(account, Convert.ToInt32(tamounttext.Text));
+            userobj.addMoney(toaccount, Convert.ToInt32(tamounttext.Text));
+
+            tacctext.Text = "";
+            tamounttext.Text = "";
+            AccNumBox.Text = "";
+            AmountBox.Text = "";
+            usermain.BringToFront();
+            usermain.Visible = true;
+            TransConfirmPanel.Visible = false;
+        }
+
+        private void confirmcancel_Click(object sender, EventArgs e)
+        {
+            tacctext.Text = "";
+            tamounttext.Text = "";
+            AccNumBox.Text = "";
+            AmountBox.Text = "";
+            usermain.BringToFront();
+            usermain.Visible = true;
+            TransConfirmPanel.Visible = false;
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+            AccNumBox.Text = tacctext.Text;
+            AmountBox.Text = tamounttext.Text;
+        }
+
     }
 }

@@ -70,6 +70,7 @@
             this.Pin6 = new System.Windows.Forms.Button();
             this.Pin5 = new System.Windows.Forms.Button();
             this.withdrawpanel = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
             this.wcancel = new System.Windows.Forms.Button();
             this.withdrawclear = new System.Windows.Forms.Button();
             this.withdrawOk = new System.Windows.Forms.Button();
@@ -87,6 +88,7 @@
             this.withdraw6 = new System.Windows.Forms.Button();
             this.withdraw5 = new System.Windows.Forms.Button();
             this.dpanel = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
             this.dcancel = new System.Windows.Forms.Button();
             this.dc = new System.Windows.Forms.Button();
             this.dok = new System.Windows.Forms.Button();
@@ -104,6 +106,7 @@
             this.d6 = new System.Windows.Forms.Button();
             this.d5 = new System.Windows.Forms.Button();
             this.viewpanel = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
             this.viewback = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.viewbox = new System.Windows.Forms.TextBox();
@@ -125,6 +128,7 @@
             this.tacc6 = new System.Windows.Forms.Button();
             this.tacc5 = new System.Windows.Forms.Button();
             this.tamountpanel = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
             this.tamountcancel = new System.Windows.Forms.Button();
             this.tamountclear = new System.Windows.Forms.Button();
             this.tamountok = new System.Windows.Forms.Button();
@@ -151,10 +155,13 @@
             this.cashTakenActionButton = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.TransConfirmPanel = new System.Windows.Forms.Panel();
+            this.AccNumBox = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.AmountBox = new System.Windows.Forms.Label();
+            this.confirmok = new System.Windows.Forms.Button();
+            this.confirmcancel = new System.Windows.Forms.Button();
+            this.SendLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.usermain.SuspendLayout();
             this.PinPanel.SuspendLayout();
@@ -166,6 +173,7 @@
             this.firstpanel.SuspendLayout();
             this.depositActionPanel.SuspendLayout();
             this.withdrawMoneyActionPanel.SuspendLayout();
+            this.TransConfirmPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // accountPad1
@@ -659,6 +667,17 @@
             this.withdrawpanel.TabIndex = 19;
             this.withdrawpanel.Visible = false;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label7.Location = new System.Drawing.Point(10, 49);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(20, 24);
+            this.label7.TabIndex = 23;
+            this.label7.Text = "$";
+            // 
             // wcancel
             // 
             this.wcancel.Location = new System.Drawing.Point(333, 20);
@@ -856,6 +875,17 @@
             this.dpanel.TabIndex = 20;
             this.dpanel.Visible = false;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label6.Location = new System.Drawing.Point(12, 49);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(20, 24);
+            this.label6.TabIndex = 23;
+            this.label6.Text = "$";
+            // 
             // dcancel
             // 
             this.dcancel.Location = new System.Drawing.Point(333, 20);
@@ -1040,6 +1070,17 @@
             this.viewpanel.TabIndex = 21;
             this.viewpanel.Visible = false;
             this.viewpanel.Paint += new System.Windows.Forms.PaintEventHandler(this.viewpanel_Paint);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label5.Location = new System.Drawing.Point(59, 156);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(20, 24);
+            this.label5.TabIndex = 23;
+            this.label5.Text = "$";
             // 
             // viewback
             // 
@@ -1290,6 +1331,17 @@
             this.tamountpanel.Size = new System.Drawing.Size(424, 426);
             this.tamountpanel.TabIndex = 23;
             this.tamountpanel.Visible = false;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label8.Location = new System.Drawing.Point(11, 49);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(20, 24);
+            this.label8.TabIndex = 23;
+            this.label8.Text = "$";
             // 
             // tamountcancel
             // 
@@ -1565,55 +1617,87 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "Remove Cash from";
             // 
-            // label6
+            // TransConfirmPanel
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label6.Location = new System.Drawing.Point(12, 49);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(20, 24);
-            this.label6.TabIndex = 23;
-            this.label6.Text = "$";
+            this.TransConfirmPanel.Controls.Add(this.AccNumBox);
+            this.TransConfirmPanel.Controls.Add(this.label9);
+            this.TransConfirmPanel.Controls.Add(this.AmountBox);
+            this.TransConfirmPanel.Controls.Add(this.confirmok);
+            this.TransConfirmPanel.Controls.Add(this.confirmcancel);
+            this.TransConfirmPanel.Controls.Add(this.SendLabel);
+            this.TransConfirmPanel.Location = new System.Drawing.Point(470, 49);
+            this.TransConfirmPanel.Name = "TransConfirmPanel";
+            this.TransConfirmPanel.Size = new System.Drawing.Size(424, 426);
+            this.TransConfirmPanel.TabIndex = 27;
+            this.TransConfirmPanel.Visible = false;
+            this.TransConfirmPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // label7
+            // AccNumBox
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label7.Location = new System.Drawing.Point(10, 49);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(20, 24);
-            this.label7.TabIndex = 23;
-            this.label7.Text = "$";
+            this.AccNumBox.AutoSize = true;
+            this.AccNumBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.AccNumBox.Location = new System.Drawing.Point(160, 227);
+            this.AccNumBox.Name = "AccNumBox";
+            this.AccNumBox.Size = new System.Drawing.Size(65, 24);
+            this.AccNumBox.TabIndex = 27;
+            this.AccNumBox.Text = "default";
             // 
-            // label8
+            // label9
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label8.Location = new System.Drawing.Point(11, 49);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(20, 24);
-            this.label8.TabIndex = 23;
-            this.label8.Text = "$";
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label9.Location = new System.Drawing.Point(105, 196);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(181, 24);
+            this.label9.TabIndex = 26;
+            this.label9.Text = "To account number:";
             // 
-            // label5
+            // AmountBox
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label5.Location = new System.Drawing.Point(59, 156);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(20, 24);
-            this.label5.TabIndex = 23;
-            this.label5.Text = "$";
+            this.AmountBox.AutoSize = true;
+            this.AmountBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.AmountBox.Location = new System.Drawing.Point(175, 104);
+            this.AmountBox.Name = "AmountBox";
+            this.AmountBox.Size = new System.Drawing.Size(65, 24);
+            this.AmountBox.TabIndex = 25;
+            this.AmountBox.Text = "defualt";
+            // 
+            // confirmok
+            // 
+            this.confirmok.Location = new System.Drawing.Point(37, 327);
+            this.confirmok.Name = "confirmok";
+            this.confirmok.Size = new System.Drawing.Size(135, 56);
+            this.confirmok.TabIndex = 24;
+            this.confirmok.Text = "Confirm";
+            this.confirmok.UseVisualStyleBackColor = true;
+            this.confirmok.Click += new System.EventHandler(this.confirmok_Click);
+            // 
+            // confirmcancel
+            // 
+            this.confirmcancel.Location = new System.Drawing.Point(210, 327);
+            this.confirmcancel.Name = "confirmcancel";
+            this.confirmcancel.Size = new System.Drawing.Size(135, 56);
+            this.confirmcancel.TabIndex = 19;
+            this.confirmcancel.Text = "Canel";
+            this.confirmcancel.UseVisualStyleBackColor = true;
+            this.confirmcancel.Click += new System.EventHandler(this.confirmcancel_Click);
+            // 
+            // SendLabel
+            // 
+            this.SendLabel.AutoSize = true;
+            this.SendLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.SendLabel.Location = new System.Drawing.Point(165, 69);
+            this.SendLabel.Name = "SendLabel";
+            this.SendLabel.Size = new System.Drawing.Size(60, 24);
+            this.SendLabel.TabIndex = 18;
+            this.SendLabel.Text = "Send:";
             // 
             // AccountNumberForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1362, 552);
+            this.Controls.Add(this.TransConfirmPanel);
             this.Controls.Add(this.viewpanel);
             this.Controls.Add(this.withdrawMoneyActionPanel);
             this.Controls.Add(this.depositActionPanel);
@@ -1648,6 +1732,8 @@
             this.depositActionPanel.PerformLayout();
             this.withdrawMoneyActionPanel.ResumeLayout(false);
             this.withdrawMoneyActionPanel.PerformLayout();
+            this.TransConfirmPanel.ResumeLayout(false);
+            this.TransConfirmPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1781,6 +1867,13 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel TransConfirmPanel;
+        private System.Windows.Forms.Label AccNumBox;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label AmountBox;
+        private System.Windows.Forms.Button confirmok;
+        private System.Windows.Forms.Button confirmcancel;
+        private System.Windows.Forms.Label SendLabel;
     }
 }
 
