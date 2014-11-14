@@ -578,8 +578,8 @@ namespace BankInterface
             Boolean found = false;
             for (int i = 0; i <Users.accounts.Length ; i++) // fixed; don't use .GetLength, use .Length
             {
-               
-                if(tacctext.Text.Equals(userobj.getAccountNum(i).ToString()))
+
+                if (tacctext.Text.Equals(userobj.getAccountNum(i).ToString()) && !tacctext.Text.Equals(userobj.getAccountNum(account).ToString()))
                 {
                     toaccount = i;
                     tamountpanel.BringToFront();
@@ -593,7 +593,7 @@ namespace BankInterface
             if(!found)
             {
                 accountNumberBox.Text = "";
-                MessageBox.Show("Account not found");
+                MessageBox.Show("Invalid Account");
             }
         }
 

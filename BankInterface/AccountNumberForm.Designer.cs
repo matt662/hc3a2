@@ -156,13 +156,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.TransConfirmPanel = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
             this.AccNumBox = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.AmountBox = new System.Windows.Forms.Label();
             this.confirmok = new System.Windows.Forms.Button();
             this.confirmcancel = new System.Windows.Forms.Button();
             this.SendLabel = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.usermain.SuspendLayout();
             this.PinPanel.SuspendLayout();
@@ -1627,12 +1627,22 @@
             this.TransConfirmPanel.Controls.Add(this.confirmok);
             this.TransConfirmPanel.Controls.Add(this.confirmcancel);
             this.TransConfirmPanel.Controls.Add(this.SendLabel);
-            this.TransConfirmPanel.Location = new System.Drawing.Point(470, 49);
+            this.TransConfirmPanel.Location = new System.Drawing.Point(23, 49);
             this.TransConfirmPanel.Name = "TransConfirmPanel";
             this.TransConfirmPanel.Size = new System.Drawing.Size(424, 426);
             this.TransConfirmPanel.TabIndex = 27;
             this.TransConfirmPanel.Visible = false;
             this.TransConfirmPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label10.Location = new System.Drawing.Point(152, 104);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(20, 24);
+            this.label10.TabIndex = 28;
+            this.label10.Text = "¥";
             // 
             // AccNumBox
             // 
@@ -1694,21 +1704,11 @@
             this.SendLabel.TabIndex = 18;
             this.SendLabel.Text = "Send:";
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label10.Location = new System.Drawing.Point(152, 104);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(20, 24);
-            this.label10.TabIndex = 28;
-            this.label10.Text = "¥";
-            // 
             // AccountNumberForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1362, 552);
+            this.ClientSize = new System.Drawing.Size(479, 493);
             this.Controls.Add(this.TransConfirmPanel);
             this.Controls.Add(this.viewpanel);
             this.Controls.Add(this.withdrawMoneyActionPanel);
