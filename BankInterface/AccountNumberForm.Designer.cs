@@ -143,13 +143,14 @@
             this.firstpanel = new System.Windows.Forms.Panel();
             this.beginbutton = new System.Windows.Forms.Button();
             this.depositActionPanel = new System.Windows.Forms.Panel();
+            this.moneyInsertedButton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.depositActionLabel = new System.Windows.Forms.Label();
-            this.moneyInsertedButton = new System.Windows.Forms.Button();
             this.withdrawMoneyActionPanel = new System.Windows.Forms.Panel();
             this.cashTakenActionButton = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.Welcome = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.usermain.SuspendLayout();
             this.PinPanel.SuspendLayout();
@@ -361,6 +362,7 @@
             // 
             // usermain
             // 
+            this.usermain.Controls.Add(this.Welcome);
             this.usermain.Controls.Add(this.SignOut);
             this.usermain.Controls.Add(this.transferfunds);
             this.usermain.Controls.Add(this.viewbalance);
@@ -1474,6 +1476,16 @@
             this.depositActionPanel.TabIndex = 25;
             this.depositActionPanel.Visible = false;
             // 
+            // moneyInsertedButton
+            // 
+            this.moneyInsertedButton.Location = new System.Drawing.Point(136, 256);
+            this.moneyInsertedButton.Name = "moneyInsertedButton";
+            this.moneyInsertedButton.Size = new System.Drawing.Size(152, 42);
+            this.moneyInsertedButton.TabIndex = 2;
+            this.moneyInsertedButton.Text = "Click to Simulate Money Inserted";
+            this.moneyInsertedButton.UseVisualStyleBackColor = true;
+            this.moneyInsertedButton.Click += new System.EventHandler(this.moneyInsertedButton_Click);
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -1493,16 +1505,6 @@
             this.depositActionLabel.Size = new System.Drawing.Size(369, 39);
             this.depositActionLabel.TabIndex = 0;
             this.depositActionLabel.Text = "Insert deposit envelope";
-            // 
-            // moneyInsertedButton
-            // 
-            this.moneyInsertedButton.Location = new System.Drawing.Point(136, 256);
-            this.moneyInsertedButton.Name = "moneyInsertedButton";
-            this.moneyInsertedButton.Size = new System.Drawing.Size(152, 42);
-            this.moneyInsertedButton.TabIndex = 2;
-            this.moneyInsertedButton.Text = "Click to Simulate Money Inserted";
-            this.moneyInsertedButton.UseVisualStyleBackColor = true;
-            this.moneyInsertedButton.Click += new System.EventHandler(this.moneyInsertedButton_Click);
             // 
             // withdrawMoneyActionPanel
             // 
@@ -1545,11 +1547,23 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "Remove Cash from";
             // 
+            // Welcome
+            // 
+            this.Welcome.AutoSize = true;
+            this.Welcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
+            this.Welcome.Location = new System.Drawing.Point(57, 20);
+            this.Welcome.Name = "Welcome";
+            this.Welcome.Size = new System.Drawing.Size(141, 31);
+            this.Welcome.TabIndex = 5;
+            this.Welcome.Text = "Welcome, ";
+            // 
             // AccountNumberForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1362, 552);
+            this.Controls.Add(this.usermain);
+            this.Controls.Add(this.viewpanel);
             this.Controls.Add(this.withdrawMoneyActionPanel);
             this.Controls.Add(this.depositActionPanel);
             this.Controls.Add(this.firstpanel);
@@ -1559,13 +1573,12 @@
             this.Controls.Add(this.withdrawpanel);
             this.Controls.Add(this.PinPanel);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.usermain);
-            this.Controls.Add(this.viewpanel);
             this.Name = "AccountNumberForm";
             this.Text = "Account Number";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.usermain.ResumeLayout(false);
+            this.usermain.PerformLayout();
             this.PinPanel.ResumeLayout(false);
             this.PinPanel.PerformLayout();
             this.withdrawpanel.ResumeLayout(false);
@@ -1711,6 +1724,7 @@
         private System.Windows.Forms.Button cashTakenActionButton;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label Welcome;
     }
 }
 
