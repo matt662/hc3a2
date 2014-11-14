@@ -162,6 +162,7 @@
             this.confirmok = new System.Windows.Forms.Button();
             this.confirmcancel = new System.Windows.Forms.Button();
             this.SendLabel = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.usermain.SuspendLayout();
             this.PinPanel.SuspendLayout();
@@ -1619,6 +1620,7 @@
             // 
             // TransConfirmPanel
             // 
+            this.TransConfirmPanel.Controls.Add(this.label10);
             this.TransConfirmPanel.Controls.Add(this.AccNumBox);
             this.TransConfirmPanel.Controls.Add(this.label9);
             this.TransConfirmPanel.Controls.Add(this.AmountBox);
@@ -1691,6 +1693,16 @@
             this.SendLabel.Size = new System.Drawing.Size(60, 24);
             this.SendLabel.TabIndex = 18;
             this.SendLabel.Text = "Send:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label10.Location = new System.Drawing.Point(152, 104);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(20, 24);
+            this.label10.TabIndex = 28;
+            this.label10.Text = "¥";
             // 
             // AccountNumberForm
             // 
@@ -1874,6 +1886,7 @@
         private System.Windows.Forms.Button confirmok;
         private System.Windows.Forms.Button confirmcancel;
         private System.Windows.Forms.Label SendLabel;
+        private System.Windows.Forms.Label label10;
     }
 }
 
