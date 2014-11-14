@@ -79,7 +79,7 @@ namespace BankInterface
         private void accountPadOK_Click(object sender, EventArgs e)
         {
             Boolean found = false;
-            for (int i = 0; i < 10; i++) // HARD CODED, GETNUMUSERS BROKEN
+            for (int i = 0; i <Users.accounts.Length ; i++) // fixed; don't use .GetLength, use .Length
             {
                
                 if(accountNumberBox.Text.Equals(userobj.getAccountNum(i).ToString()))
@@ -97,6 +97,7 @@ namespace BankInterface
             if(!found)
             {
                 accountNumberBox.Text = "";
+                MessageBox.Show("Account not found");
             }
 
             
@@ -135,6 +136,7 @@ namespace BankInterface
                 else
                 {
                    PinBox.Text = "";
+                   MessageBox.Show("Incorrect Pin");
                 }
 
             

@@ -14,10 +14,10 @@ public class Users
        public int[] money = { 12345, 11111, 22222, 33333, 44444, 55555, 66666, 77777, 88888, 99999, 00000 };
 
 
-       public int getNumUsers() //broken
+       /*public int getNumUsers() //should be fixed, but no longer needed
        {
-           return accounts.GetLength(1) - 1;
-       }
+           return accounts.Length;//don't use .GetLength use .Length
+       }*/
 
        public int getAccountNum(int index)
        {
