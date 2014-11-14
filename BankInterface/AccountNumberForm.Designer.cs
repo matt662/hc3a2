@@ -154,6 +154,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.usermain.SuspendLayout();
             this.PinPanel.SuspendLayout();
@@ -1029,6 +1030,7 @@
             // 
             // viewpanel
             // 
+            this.viewpanel.Controls.Add(this.label5);
             this.viewpanel.Controls.Add(this.viewback);
             this.viewpanel.Controls.Add(this.label1);
             this.viewpanel.Controls.Add(this.viewbox);
@@ -1063,9 +1065,9 @@
             // 
             this.viewbox.Enabled = false;
             this.viewbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.viewbox.Location = new System.Drawing.Point(69, 144);
+            this.viewbox.Location = new System.Drawing.Point(82, 144);
             this.viewbox.Name = "viewbox";
-            this.viewbox.Size = new System.Drawing.Size(249, 29);
+            this.viewbox.Size = new System.Drawing.Size(236, 29);
             this.viewbox.TabIndex = 17;
             // 
             // transferpanelacc
@@ -1596,12 +1598,22 @@
             this.label8.TabIndex = 23;
             this.label8.Text = "$";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label5.Location = new System.Drawing.Point(59, 146);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(20, 24);
+            this.label5.TabIndex = 23;
+            this.label5.Text = "$";
+            // 
             // AccountNumberForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1362, 552);
-            this.Controls.Add(this.usermain);
             this.Controls.Add(this.viewpanel);
             this.Controls.Add(this.withdrawMoneyActionPanel);
             this.Controls.Add(this.depositActionPanel);
@@ -1612,6 +1624,7 @@
             this.Controls.Add(this.withdrawpanel);
             this.Controls.Add(this.PinPanel);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.usermain);
             this.Name = "AccountNumberForm";
             this.Text = "Account Number";
             this.panel1.ResumeLayout(false);
@@ -1767,6 +1780,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label5;
     }
 }
 
