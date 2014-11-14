@@ -13,6 +13,8 @@ namespace BankInterface
     public partial class AccountNumberForm : Form
     {
         public int account;
+        Users userobj = new Users();
+        
         public AccountNumberForm()
         {
             InitializeComponent();
@@ -76,12 +78,11 @@ namespace BankInterface
 
         private void accountPadOK_Click(object sender, EventArgs e)
         {
-
             Boolean found = false;
-            for (int i = 0; i < Users.accounts.GetLength(1); i++)
+            for (int i = 0; i < 10; i++) // HARD CODED, GETNUMUSERS BROKEN
             {
                
-                if(accountNumberBox.Text.Equals(Users.accounts[i].ToString()))
+                if(accountNumberBox.Text.Equals(userobj.getAccountNum(i).ToString()))
                 {
                 account = i;
                 panel1.Visible = false;
@@ -120,7 +121,7 @@ namespace BankInterface
         {
              
 
-                if (PinBox.Text.Equals(Users.pins[account].ToString()))
+                if (PinBox.Text.Equals(userobj.getPinNum(account).ToString()))
                 {
 
                     PinPanel.Visible = false;
@@ -297,9 +298,9 @@ namespace BankInterface
 
         private void withdrawOk_Click(object sender, EventArgs e)
         {
-            if (Convert.ToInt32(withdrawbox.Text)<(Users.getMoney(account)))
+            if (Convert.ToInt32(withdrawbox.Text)<(userobj.getMoney(account)))
                 {
-                    Users.loseMoney(account, Convert.ToInt32(withdrawbox.Text));
+                    userobj.loseMoney(account, Convert.ToInt32(withdrawbox.Text));
                     viewpanel.BringToFront();
                     withdrawpanel.Visible = false;
                     viewbox.Text = "My Balance";
@@ -403,7 +404,7 @@ namespace BankInterface
 
         private void dok_Click(object sender, EventArgs e)
         {
-            Users.addMoney(account, Convert.ToInt32(withdrawbox.Text));
+            userobj.addMoney(account, Convert.ToInt32(withdrawbox.Text));
             viewpanel.BringToFront();
             dpanel.Visible = false;
             viewbox.Text = "My Balance";
